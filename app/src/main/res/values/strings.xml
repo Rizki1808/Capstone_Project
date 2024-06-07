@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Capstone Project</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="nav_feature">Feature</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_profile">Profile</string>
+    <string name="this_is_profile_fragment">This is profile fragment</string>
 </resources>

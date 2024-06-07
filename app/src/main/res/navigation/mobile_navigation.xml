@@ -13,13 +13,19 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.capstoneproject.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:name="com.example.capstoneproject.ui.feature.FeatureFragment"
+        android:label="@string/nav_feature"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.capstoneproject.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:name="com.example.capstoneproject.ui.explore.ExploreFragment"
+        android:label="@string/nav_explore"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.capstoneproject.ui.profile.ProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
