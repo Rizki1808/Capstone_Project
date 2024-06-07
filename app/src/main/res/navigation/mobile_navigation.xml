@@ -15,13 +15,13 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.example.capstoneproject.ui.feature.FeatureFragment"
         android:label="@string/nav_feature"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_feature" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.capstoneproject.ui.explore.ExploreFragment"
         android:label="@string/nav_explore"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_explore" />
 
     <fragment
         android:id="@+id/navigation_profile"
