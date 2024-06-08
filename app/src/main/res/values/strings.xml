@@ -1,6 +1,6 @@
 <resources>
     // Tittle
-    <string name="app_name">SelfCare</string>
+    <string name="app_name">SelfMedic</string>
     <string name="selamat_datang">Selamat Datang</string>
 
     // Navigation
@@ -21,4 +21,21 @@
     <string name="fitur_lain">Fitur Lain</string>
     <string name="diari_kesehatan">Diari Kesehatan</string>
     <string name="fitur">Fitur</string>
+
+    // Login
+    <string name="silahkan_masuk">Silahkan Masuk</string>
+    <string name="selamat_datang_detail">Selamat Datang! Silakan masukkan detail Anda.</string>
+    <string name="email">Email\n</string>
+    <string name="masukkan_email">Masukan Email Anda</string>
+    <string name="password">Password</string>
+    <string name="masukkan_password">**********</string>
+    <string name="masuk">Masuk</string>
+    <string name="anda_tidak_punya_akun">Anda Tidak Punya Akun?</string>
+    <string name="daftar">Daftar</string>
+    <string name="anda_sudah_punya_akun">Anda Sudah Punya Akun?</string>
+
+    // Dafar
+    <string name="username">Username</string>
+    <string name="masukan_username">Masukan Username</string>
+
 </resources>
