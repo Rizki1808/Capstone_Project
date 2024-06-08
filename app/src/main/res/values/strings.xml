@@ -1,8 +1,24 @@
 <resources>
-    <string name="app_name">Capstone Project</string>
+    // Tittle
+    <string name="app_name">SelfCare</string>
+    <string name="selamat_datang">Selamat Datang</string>
+
+    // Navigation
     <string name="title_home">Home</string>
     <string name="nav_feature">Feature</string>
     <string name="nav_explore">Explore</string>
     <string name="nav_profile">Profile</string>
+
     <string name="this_is_profile_fragment">This is profile fragment</string>
+
+    //Feature
+    <string name="akses_cepat">Akses Cepat</string>
+    <string name="info_penyakit">Info Penyakit</string>
+    <string name="pendeteksi_penyakit_kulit">Pendeteksi Penyakit Kulit</string>
+    <string name="pendeteksi_jerawat">Pendeteksi Jerawat</string>
+    <string name="rumah_sakit_terdekat">Rumah Sakit Terdekat</string>
+    <string name="pengingat_minum_obat">Pengingat Minum Obat</string>
+    <string name="fitur_lain">Fitur Lain</string>
+    <string name="diari_kesehatan">Diari Kesehatan</string>
+    <string name="fitur">Fitur</string>
 </resources>

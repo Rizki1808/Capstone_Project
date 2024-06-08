@@ -10,4 +10,11 @@
     <color name="grey">#00B4D8</color>
     <color name="blue_500">#0077B6</color>
     <color name="blue_700">#03045E</color>
+    <color name="coklat_200">#C4A8A2</color>
+    <color name="coklat_700">#7E5752</color>
+    <color name="green_500">#2D9670</color>
+    <color name="pink_500">#E19C9C</color>
+    <color name="red_500">#C04B4B</color>
+    <color name="grey_100">#DDDDDD</color>
+    <color name="grey_200">#999999</color>
 </resources>
