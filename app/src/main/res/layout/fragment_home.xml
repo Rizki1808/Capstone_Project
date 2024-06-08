@@ -52,7 +52,7 @@
                     android:gravity="center_horizontal">
 
                     <LinearLayout
-                        android:id="@+id/linearLayout"
+                        android:id="@+id/ic_infoPenyakit"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -79,7 +79,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearLayout2"
+                        android:id="@+id/ic_pendeteksiKulit"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -107,7 +107,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearLayout3"
+                        android:id="@+id/ic_pendeteksiJerawat"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -135,7 +135,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearLayout4"
+                        android:id="@+id/ic_rumahSakitTerdekat"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -171,7 +171,7 @@
                     android:gravity="center_horizontal">
 
                     <LinearLayout
-                        android:id="@+id/linearLayout5"
+                        android:id="@+id/ic_pengingatMinumObat"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -198,7 +198,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearLayout6"
+                        android:id="@+id/ic_diariKesehatan"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -225,7 +225,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearLayout7"
+                        android:id="@+id/ic_fiturLain"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

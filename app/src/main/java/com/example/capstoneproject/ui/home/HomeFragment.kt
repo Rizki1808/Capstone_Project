@@ -1,5 +1,6 @@
 package com.example.capstoneproject.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.databinding.FragmentHomeBinding
+import com.example.capstoneproject.ui.feature.item.InfoPenyakitActivity
+import com.example.capstoneproject.ui.feature.item.MapsActivity
+import com.example.capstoneproject.ui.feature.item.PendeteksiJerawatActivity
+import com.example.capstoneproject.ui.feature.item.PendeteksiKulitActivity
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +31,26 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding.icInfoPenyakit.setOnClickListener {
+            val intent = Intent(activity, InfoPenyakitActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.icPendeteksiKulit.setOnClickListener {
+            val intent = Intent(activity, PendeteksiKulitActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.icPendeteksiJerawat.setOnClickListener {
+            val intent = Intent(activity, PendeteksiJerawatActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.icRumahSakitTerdekat.setOnClickListener {
+            val intent = Intent(activity, MapsActivity::class.java)
+            startActivity(intent)
+        }
 
         return root
     }
