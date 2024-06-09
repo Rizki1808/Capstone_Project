@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CapstoneProject"
         tools:targetApi="31">
         <activity
+            android:name=".ui.feature.item.minumobat.TambahObatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.feature.item.minumobat.MinumObatActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.feature.item.pendeteksijerawat.HistoryJerawatActivity"
             android:exported="false" />
         <activity
@@ -56,7 +62,7 @@
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
