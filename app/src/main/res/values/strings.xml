@@ -66,5 +66,10 @@
     <string name="dosis">Dosis</string>
     <string name="masukkan_nama_obat">Masukkan Nama Obat</string>
     <string name="nama_obat">Nama Obat</string>
+    <string name="btn_ngd">Nomor Gawat Darurat</string>
+    <string name="btn_language">Bahasa</string>
+    <string name="aksesibilitas_btn">Aksesibilitas</string>
+    <string name="info_btn">Tentang</string>
+    <string name="logout_btn">Logout</string>
 
 </resources>
