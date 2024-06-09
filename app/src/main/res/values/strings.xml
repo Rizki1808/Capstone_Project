@@ -39,4 +39,11 @@
     <string name="masukan_username">Masukan Username</string>
     <string name="title_activity_maps">MapsActivity</string>
 
+    // Fitur Pendeteksi
+    <string name="preview_image">Preview Image</string>
+    <string name="kamera">Kamera</string>
+    <string name="galery">Galery</string>
+    <string name="analisis">Analisis</string>
+    <string name="riwayat">Riwayat</string>
+
 </resources>

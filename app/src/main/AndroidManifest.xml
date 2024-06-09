@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneProject"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.feature.item.pendeteksijerawat.HistoryJerawatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.feature.item.pendeteksikulit.HistoryKulitActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB7cn62_TiPObkj9AyZRsE_a7dXNLICQYY" />
@@ -46,6 +53,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>
