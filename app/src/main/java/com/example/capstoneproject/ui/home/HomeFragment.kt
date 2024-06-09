@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.databinding.FragmentHomeBinding
-import com.example.capstoneproject.ui.feature.item.InfoPenyakitActivity
-import com.example.capstoneproject.ui.feature.item.MapsActivity
-import com.example.capstoneproject.ui.feature.item.PendeteksiJerawatActivity
-import com.example.capstoneproject.ui.feature.item.PendeteksiKulitActivity
+import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
+import com.example.capstoneproject.ui.feature.item.rumahsakit.MapsActivity
+import com.example.capstoneproject.ui.feature.item.pendeteksijerawat.PendeteksiJerawatActivity
+import com.example.capstoneproject.ui.feature.item.pendeteksikulit.PendeteksiKulitActivity
 
 class HomeFragment : Fragment() {
 

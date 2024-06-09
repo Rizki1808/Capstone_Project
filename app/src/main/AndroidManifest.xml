@@ -17,17 +17,17 @@
             android:value="AIzaSyB7cn62_TiPObkj9AyZRsE_a7dXNLICQYY" />
 
         <activity
-            android:name=".ui.feature.item.MapsActivity"
+            android:name=".ui.feature.item.rumahsakit.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".ui.feature.item.PendeteksiJerawatActivity"
+            android:name=".ui.feature.item.pendeteksijerawat.PendeteksiJerawatActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.PendeteksiKulitActivity"
+            android:name=".ui.feature.item.pendeteksikulit.PendeteksiKulitActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.InfoPenyakitActivity"
+            android:name=".ui.feature.item.infopenyakit.InfoPenyakitActivity"
             android:exported="false" />
         <activity
             android:name=".ui.login.SignUpActivity"

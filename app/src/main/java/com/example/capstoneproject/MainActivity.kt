@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
-                R.id.navigation_dashboard,
-                R.id.navigation_notifications,
+                R.id.navigation_feature,
+                R.id.navigation_explore,
                 R.id.navigation_profile
             )
         )

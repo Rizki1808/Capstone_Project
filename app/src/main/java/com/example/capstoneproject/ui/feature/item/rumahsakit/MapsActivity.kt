@@ -1,4 +1,4 @@
-package com.example.capstoneproject.ui.feature.item
+package com.example.capstoneproject.ui.feature.item.rumahsakit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
