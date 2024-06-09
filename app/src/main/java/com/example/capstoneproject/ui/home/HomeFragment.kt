@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.databinding.FragmentHomeBinding
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
+import com.example.capstoneproject.ui.feature.item.minumobat.MinumObatActivity
 import com.example.capstoneproject.ui.feature.item.rumahsakit.MapsActivity
 import com.example.capstoneproject.ui.feature.item.pendeteksijerawat.PendeteksiJerawatActivity
 import com.example.capstoneproject.ui.feature.item.pendeteksikulit.PendeteksiKulitActivity
@@ -49,6 +50,11 @@ class HomeFragment : Fragment() {
 
         binding.icRumahSakitTerdekat.setOnClickListener {
             val intent = Intent(activity, MapsActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.icPengingatMinumObat.setOnClickListener {
+            val intent = Intent(activity, MinumObatActivity::class.java)
             startActivity(intent)
         }
 
