@@ -19,4 +19,9 @@
     <color name="red_500">#C04B4B</color>
     <color name="grey_100">#DDDDDD</color>
     <color name="grey_200">#999999</color>
+    <color name="grey_btn">#CCCCCC</color>
+    <color name="grey_500">#666666</color>
+    <color name="grey_text_btn">#49454F</color>
+
+
 </resources>

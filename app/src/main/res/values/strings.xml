@@ -9,7 +9,7 @@
     <string name="nav_explore">Explore</string>
     <string name="nav_profile">Profile</string>
 
-    <string name="this_is_profile_fragment">This is profile fragment</string>
+    <string name="this_is_profile_fragment">Profile</string>
 
     //Feature
     <string name="akses_cepat">Akses Cepat</string>
@@ -38,5 +38,10 @@
     <string name="username">Username</string>
     <string name="masukan_username">Masukan Username</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="Profile_Image">Profile Image</string>
+    <string name="name_profile">Nama Profile</string>
+    <string name="email_text">useremail0@gmail.com</string>
+    <string name="btn_edit_profile">Edit Profile</string>
+    <string name="headline_profile">Informasi Umum</string>
 
 </resources>
