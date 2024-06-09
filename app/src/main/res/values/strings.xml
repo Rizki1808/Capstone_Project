@@ -48,5 +48,18 @@
 
     // Pengingat Minum Obat
     <string name="tambahkan_pengingat_minum_obat">Tambahkan Pengingat Minum Obat</string>
+    <string name="simpan">Simpan</string>
+    <string name="masukkan_catatan">Masukkan Catatan</string>
+    <string name="catatan_opsional">Catatan (Opsional)</string>
+    <string name="masukkan_aturan_minum">Masukkan Aturan Minum</string>
+    <string name="aturan_minum">Aturan Minum</string>
+    <string name="masukkan_jam_minum_obat">Masukkan Jam Minum Obat</string>
+    <string name="jam_minum_obat">Jam Minum Obat</string>
+    <string name="masukkan_berapa_kali_sehari">Masukkan Berapa Kali Sehari</string>
+    <string name="berapa_kali_sehari">Berapa Kali Sehari</string>
+    <string name="masukkan_dosis">Masukkan Dosis</string>
+    <string name="dosis">Dosis</string>
+    <string name="masukkan_nama_obat">Masukkan Nama Obat</string>
+    <string name="nama_obat">Nama Obat</string>
 
 </resources>
