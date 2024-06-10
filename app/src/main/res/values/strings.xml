@@ -71,5 +71,6 @@
     <string name="aksesibilitas_btn">Aksesibilitas</string>
     <string name="info_btn">Tentang</string>
     <string name="logout_btn">Logout</string>
+    <string name="line_divider">Line Divider</string>
 
 </resources>
