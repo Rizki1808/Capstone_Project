@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.R
+import com.example.capstoneproject.ui.home.HomeViewModel
+import com.example.capstoneproject.ui.profile.EditProfile.EditProfileFragment
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -34,6 +38,17 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false)
+        val ProfileViewMOdel =
+            ViewModelProvider(this).get(ProfileViewModel::class.java)
+
+        // Initialize buttons
+        val button_edit = view?.findViewById<Button>(R.id.btn_edit_profile)
+        val button_ambulance = view?.findViewById<Button>(R.id.btn_ambulance)
+        val button_language = view?.findViewById<Button>(R.id.btn_language)
+        val button_aski = view?.findViewById<Button>(R.id.btn_aksi)
+        val button_logout = view?.findViewById<Button>(R.id.btn_logout)
+        val button_info = view?.findViewById<Button>(R.id.btn_info)
+
     }
 
     companion object {
