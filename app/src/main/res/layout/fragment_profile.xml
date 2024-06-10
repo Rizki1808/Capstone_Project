@@ -158,7 +158,6 @@
                     android:backgroundTint="@color/grey_btn"
                     android:drawableLeft="@drawable/ic_language"
                     android:drawableRight="@drawable/ic_next"
-                    android:text="@string/btn_language"
                     android:textColor="@color/grey_text_btn"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
