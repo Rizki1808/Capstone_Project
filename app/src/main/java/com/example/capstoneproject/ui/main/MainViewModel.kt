@@ -1,4 +1,4 @@
-package com.example.capstoneproject.ui.profile
+package com.example.capstoneproject.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,7 +9,7 @@ import com.example.capstoneproject.data.UserRepository
 import com.example.capstoneproject.data.response.UserModel
 import kotlinx.coroutines.launch
 
-class ProfileViewModel(private val repository: UserRepository) : ViewModel() {
+class MainViewModel(private val repository: UserRepository) : ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> get() = _isLoading

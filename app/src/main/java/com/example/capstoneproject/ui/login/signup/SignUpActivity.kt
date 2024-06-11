@@ -1,9 +1,10 @@
-package com.example.capstoneproject.ui.login
+package com.example.capstoneproject.ui.login.signup
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.capstoneproject.databinding.ActivitySignUpBinding
+import com.example.capstoneproject.ui.login.signin.SignInActivity
 
 class SignUpActivity : AppCompatActivity() {
 
