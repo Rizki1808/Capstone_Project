@@ -180,13 +180,13 @@
 
             <!-- Button -->
             <Button
-                android:id="@+id/button"
+                android:id="@+id/daftarButton"
                 android:layout_width="0dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/rounded_border"
                 android:fontFamily="@font/ibm_plex_sans_semibold"
-                android:text="@string/masuk"
+                android:text="@string/daftar"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="@+id/passwordEditTextLayout"
                 app:layout_constraintStart_toStartOf="@+id/passwordEditTextLayout"
@@ -198,9 +198,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/button"
-                app:layout_constraintStart_toStartOf="@+id/button"
-                app:layout_constraintTop_toBottomOf="@+id/button">
+                app:layout_constraintEnd_toEndOf="@+id/daftarButton"
+                app:layout_constraintStart_toStartOf="@+id/daftarButton"
+                app:layout_constraintTop_toBottomOf="@+id/daftarButton">
 
                 <TextView
                     android:id="@+id/textView3"

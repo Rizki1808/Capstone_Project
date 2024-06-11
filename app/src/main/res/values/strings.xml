@@ -72,5 +72,6 @@
     <string name="info_btn">Tentang</string>
     <string name="logout_btn">Logout</string>
     <string name="line_divider">Line Divider</string>
+    <string name="hindari">Hindari Beberapa Penyakit Ini</string>
 
 </resources>
