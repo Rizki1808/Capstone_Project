@@ -156,42 +156,6 @@
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Berapa Kali Sehari TextView -->
-                    <TextView
-                        android:id="@+id/sehariTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="20dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/ibm_plex_sans_semibold"
-                        android:text="@string/berapa_kali_sehari"
-                        android:textColor="@color/black_700"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/dosisEditTextLayout" />
-
-                    <!-- Berapa Kali Sehari TextInputLayout -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/sehariEditTextLayout"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="55dp"
-                        android:layout_marginEnd="32dp"
-                        app:hintEnabled="false"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/sehariTextView"
-                        app:layout_constraintTop_toBottomOf="@+id/sehariTextView">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_sehari"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/rounded_border"
-                            android:hint="@string/masukkan_berapa_kali_sehari"
-                            android:ems="10"
-                            android:inputType="number"
-                            tools:ignore="SpeakableTextPresentCheck" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
                     <!-- Jam Minum Obat TextView -->
                     <TextView
                         android:id="@+id/jamMinumTextView"
@@ -203,7 +167,7 @@
                         android:text="@string/jam_minum_obat"
                         android:textColor="@color/black_700"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/sehariEditTextLayout" />
+                        app:layout_constraintTop_toBottomOf="@+id/dosisEditTextLayout" />
 
                     <!-- Jam Minum Obat TextInputLayout -->
                     <com.google.android.material.textfield.TextInputLayout
@@ -301,7 +265,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/btn_simpan"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:layout_marginTop="16dp"

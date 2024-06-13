@@ -73,5 +73,20 @@
     <string name="logout_btn">Logout</string>
     <string name="line_divider">Line Divider</string>
     <string name="hindari">Hindari Beberapa Penyakit Ini</string>
+    <string name="hapus">Hapus</string>
+    <string name="change">Ubah</string>
+    <string name="update">Perbaharui</string>
+    <string name="add">Tambah</string>
+    <string name="save">Simpan</string>
+    <string name="empty">Tidak Boleh Kosong</string>
+    <string name="changed">Berhasil Diubah</string>
+    <string name="added">Berhasil Ditambahkan</string>
+    <string name="cancel">Batal</string>
+    <string name="message_cancel">Apakah anda ingin membatalkan perubahan pada form?</string>
+    <string name="message_delete">Apakah anda yakin ingin menghapus item ini?</string>
+    <string name="deleted">Satu item berhasil dihapus</string>
+    <string name="delete">Hapus</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
 
 </resources>
