@@ -107,13 +107,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/emailTextView"
                 app:layout_constraintTop_toBottomOf="@+id/emailTextView"
-                android:hint="@string/masukkan_email">
+                app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/ed_login_email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/rounded_border"
+
+                    android:hint="@string/masukkan_email"
                     android:ems="10"
                     android:inputType="textEmailAddress"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -136,7 +138,7 @@
                 android:layout_width="0dp"
                 android:layout_height="55dp"
                 android:layout_marginEnd="32dp"
-                android:hint="@string/masukkan_password"
+                app:hintEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/passwordTextView"
                 app:layout_constraintTop_toBottomOf="@+id/passwordTextView">
@@ -146,6 +148,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/rounded_border"
+                    android:hint="@string/masukkan_password"
                     android:ems="10"
                     android:inputType="textEmailAddress"
                     tools:ignore="SpeakableTextPresentCheck" />

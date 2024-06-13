@@ -104,7 +104,7 @@
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:layout_marginEnd="32dp"
-                        android:hint="@string/masukkan_nama_obat"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/obatTextView"
                         app:layout_constraintTop_toBottomOf="@+id/obatTextView">
@@ -115,6 +115,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
                             android:ems="10"
+                            android:hint="@string/masukkan_nama_obat"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -139,7 +140,7 @@
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:layout_marginEnd="32dp"
-                        android:hint="@string/masukkan_dosis"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/dosisTextView"
                         app:layout_constraintTop_toBottomOf="@+id/dosisTextView">
@@ -149,6 +150,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
+                            android:hint="@string/masukkan_dosis"
                             android:ems="10"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
@@ -174,7 +176,7 @@
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:layout_marginEnd="32dp"
-                        android:hint="@string/masukkan_berapa_kali_sehari"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/sehariTextView"
                         app:layout_constraintTop_toBottomOf="@+id/sehariTextView">
@@ -184,6 +186,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
+                            android:hint="@string/masukkan_berapa_kali_sehari"
                             android:ems="10"
                             android:inputType="number"
                             tools:ignore="SpeakableTextPresentCheck" />
@@ -209,7 +212,7 @@
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:layout_marginEnd="32dp"
-                        android:hint="@string/masukkan_jam_minum_obat"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/jamMinumTextView"
                         app:layout_constraintTop_toBottomOf="@+id/jamMinumTextView">
@@ -219,6 +222,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
+                            android:hint="@string/masukkan_jam_minum_obat"
                             android:ems="10"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
@@ -244,7 +248,7 @@
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:layout_marginEnd="32dp"
-                        android:hint="@string/masukkan_aturan_minum"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/aturanTextView"
                         app:layout_constraintTop_toBottomOf="@+id/aturanTextView">
@@ -254,6 +258,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
+                            android:hint="@string/masukkan_aturan_minum"
                             android:ems="10"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
@@ -279,7 +284,7 @@
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:layout_marginEnd="32dp"
-                        android:hint="@string/masukkan_catatan"
+                        app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/catatanTextView"
                         app:layout_constraintTop_toBottomOf="@+id/catatanTextView">
@@ -289,6 +294,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
+                            android:hint="@string/masukkan_catatan"
                             android:ems="10"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
