@@ -103,6 +103,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -139,6 +140,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -150,8 +152,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
-                            android:hint="@string/masukkan_dosis"
                             android:ems="10"
+                            android:hint="@string/masukkan_dosis"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -175,6 +177,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -186,8 +189,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
-                            android:hint="@string/masukkan_jam_minum_obat"
                             android:ems="10"
+                            android:hint="@string/masukkan_jam_minum_obat"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -211,6 +214,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -222,8 +226,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
-                            android:hint="@string/masukkan_aturan_minum"
                             android:ems="10"
+                            android:hint="@string/masukkan_aturan_minum"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -247,6 +251,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -258,8 +263,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
-                            android:hint="@string/masukkan_catatan"
                             android:ems="10"
+                            android:hint="@string/masukkan_catatan"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>

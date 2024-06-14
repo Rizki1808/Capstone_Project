@@ -1,5 +1,6 @@
 package com.example.capstoneproject.ui.feature.item.minumobat
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -39,6 +40,11 @@ class MinumObatAdapter: RecyclerView.Adapter<MinumObatAdapter.MinumObatViewHolde
                 tvDose.text = drugs.dose
                 tvTime.text = drugs.timeToTake
                 tvInstruction.text = drugs.instructions
+                cardViewDrugs.setOnClickListener {
+                    val intent = Intent(it.context, TambahObatActivity::class.java)
+                    intent.putExtra(TambahObatActivity.EXTRA_DRUGS, drugs)
+                    it.context.startActivity(intent)
+                }
             }
         }
     }
