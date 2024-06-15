@@ -2,7 +2,7 @@ package com.example.capstoneproject.data.response
 
 import com.google.gson.annotations.SerializedName
 
-data class StoryResponse(
+data class DiseasesResponse(
 
     @field:SerializedName("listStory")
     val listStory: ArrayList<ListStoryItem>,
