@@ -69,7 +69,19 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:shapeAppearanceOverlay="@style/Rounded"
-                app:srcCompat="@drawable/ic_plus_24dp" />
+                app:srcCompat="@drawable/ic_add" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_drugs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/item_obat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

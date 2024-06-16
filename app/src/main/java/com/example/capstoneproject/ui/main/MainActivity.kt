@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -13,6 +14,7 @@ import com.example.capstoneproject.R
 import com.example.capstoneproject.data.ViewModelFactory
 import com.example.capstoneproject.databinding.ActivityMainBinding
 import com.example.capstoneproject.ui.login.signin.SignInActivity
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +25,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        viewModel.getSession().observe(this@MainActivity) { user ->
+            if (!user.isLogin) {
+                startActivity(Intent(this, SignInActivity::class.java))
+                finish()
+            }
+        }
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -39,11 +49,10 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        viewModel.getSession().observe(this) { user ->
-            if (!user.isLogin) {
-                startActivity(Intent(this, SignInActivity::class.java))
-                finish()
-            }
-        }
+    }
+
+    private fun navigateToSignIn() {
+        startActivity(Intent(this, SignInActivity::class.java))
+        finish()
     }
 }
