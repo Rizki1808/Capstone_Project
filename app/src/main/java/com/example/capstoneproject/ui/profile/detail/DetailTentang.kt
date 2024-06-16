@@ -1,4 +1,4 @@
-package com.example.capstoneproject.ui.profile.EditProfile
+package com.example.capstoneproject.ui.profile.detail
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,11 +7,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.capstoneproject.R
 
-class EditProfileFragment : AppCompatActivity() {
+class DetailTentang : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_edit_profile_fragment)
+        setContentView(R.layout.activity_detail_tentang)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

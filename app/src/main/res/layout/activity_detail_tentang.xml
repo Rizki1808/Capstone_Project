@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.detail.DetailTentang">
+
+    <Button
+        android:id="@+id/back_up"
+        android:layout_width="49dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="11dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button"
+        android:drawableLeft="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/text_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="@string/tentang"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_up"
+        app:layout_constraintStart_toEndOf="@+id/back_up"
+        app:layout_constraintTop_toTopOf="@+id/back_up"
+        app:layout_constraintVertical_bias="0.066" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

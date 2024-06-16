@@ -12,12 +12,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.CapstoneProject"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.profile.EditProfile.EditProfileFragment"
+            android:name=".ui.profile.detail.DetailTentang"
             android:exported="false" />
+        <activity
+            android:name=".ui.profile.detail.DetailAksesibilitas"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.detail.DetailNGD"
+            android:exported="false"
+            android:label="Nomor Gawat Darurat Nasional"
+            />
         <activity
             android:name=".ui.feature.item.minumobat.TambahObatActivity"
             android:exported="false" />
@@ -68,7 +76,10 @@
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="DiscouragedApi" />
+
+
     </application>
 
 </manifest>

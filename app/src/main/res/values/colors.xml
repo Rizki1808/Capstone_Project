@@ -14,7 +14,7 @@
     <color name="blue_700">#03045E</color>
     <color name="coklat_200">#C4A8A2</color>
     <color name="coklat_700">#7E5752</color>
-    <color name="green_500">#2D9670</color>
+    <color name="green_500">#2D9596</color>
     <color name="pink_500">#E19C9C</color>
     <color name="red_500">#C04B4B</color>
     <color name="grey_100">#DDDDDD</color>
@@ -22,6 +22,5 @@
     <color name="grey_btn">#CCCCCC</color>
     <color name="grey_500">#666666</color>
     <color name="grey_text_btn">#49454F</color>
-
-
+    <color name="grey_txt">#1F1F1F</color>
 </resources>

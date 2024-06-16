@@ -72,5 +72,31 @@
     <string name="info_btn">Tentang</string>
     <string name="logout_btn">Logout</string>
     <string name="line_divider">Line Divider</string>
+    <string name="this_is_detail_profile">Detail</string>
+    <string name="back_button">backbtn</string>
+    <string name="tv_detail_ngd">Nomor Gawat Darurat Nasional</string>
+    <string name="scrollviewhome">ScrollView Horizontal\n</string>
+    <string name="head_news">Headline News</string>
+    <string name="head_nws">Berita</string>
+    <string name="more_news">Berita Terkini Terkait</string>
+    <string name="more_nws">Lihat Semua</string>
+    <string name="head_kgd">Kondisi Gawat Darurat</string>
+    <string name="detail_kgd">Penanganan Medis Cepat Tanggap</string>
+    <string name="img_kgd">Image Kgd</string>
+    <string name="devider">devider\n</string>
+    <string name="head_berita1">Medic</string>
+    <string name="head_berita2">News</string>
+    <string name="dtil_news">Kumpulan tips kesehatan, Informasi penyakit dan kesehatan yang\nlengkap dan terpercaya</string>
+    <string name="searchbar_hint">Masukkan kata</string>
+    <string name="head_pil">Sentera Informasi Keracunan</string>
+    <string name="head_pmi">Palang Merah Indonesia</string>
+    <string name="img_pmi">image pmi</string>
+    <string name="head_cs">Pusat Bantuan Kemenakes</string>
+    <string name="detail_cs">Layanan dan Informasi Kemenakes</string>
+    <string name="img_cs">kemenakes img</string>
+    <string name="tv_detail_akses">Aksesibilitas</string>
+    <string name="tv_akesibilitas">Push Notification</string>
+    <string name="tentang">Tentang SelfMedic</string>
+
 
 </resources>
