@@ -88,5 +88,29 @@
     <string name="delete">Hapus</string>
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
+    <string name="back_button">back</string>
+    <string name="tentang">Tentang SelfMedic</string>
+    <string name="tv_detail_akses">Aksesibilitas</string>
+    <string name="tv_akesibilitas">Push Notification</string>
+    <string name="tv_detail_ngd">Nomor Gawat Darurat Nasional</string>
+    <string name="head_kgd">Kondisi Gawat Darurat</string>
+    <string name="img_kgd">img kondisi gawat darurat</string>
+    <string name="detail_kgd">Penanganan Medis Cepat Tanggap</string>
+    <string name="head_pil">Sentera Informasi Keracunan</string>
+    <string name="detail_sentera">Informasi Penanganan Keracunan \nDaerah DKI Jakarta</string>
+    <string name="img_pmi">img pmi</string>
+    <string name="head_pmi">Palang Merah Indonesia</string>
+    <string name="detail_pmi">Pelayanan darah dan Kemanusiaan\nDaerah DKI Jakarta</string>
+    <string name="head_cs">Pusat bantuan Kemenakes</string>
+    <string name="detail_cs">Layanan dan Informasi Kemenakes</string>
+    <string name="devider">devider</string>
+    <string name="img_cs">cs image</string>
+    <string name="head_news">News</string>
+    <string name="head_nws">Berita Terbaru</string>
+    <string name="more_news">Berita terkini terkait</string>
+    <string name="more_nws">Lihat Semua</string>
+    <string name="head_berita1">Medic</string>
+    <string name="head_berita2">News</string>
+    <string name="dtil_news">Kumpulan tips kesehatan, informasi penyakit dan kesehatan yang\nlengkap dan terpercaya</string>
 
 </resources>
