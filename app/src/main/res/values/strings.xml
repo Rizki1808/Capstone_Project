@@ -97,6 +97,44 @@
     <string name="delete">Hapus</string>
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
+    <string name="back_button">back</string>
+    <string name="tentang">Tentang SelfMedic</string>
+    <string name="tv_detail_akses">Aksesibilitas</string>
+    <string name="tv_akesibilitas">Push Notification</string>
+    <string name="tv_detail_ngd">Nomor Gawat Darurat Nasional</string>
+    <string name="head_kgd">Kondisi Gawat Darurat</string>
+    <string name="img_kgd">img kondisi gawat darurat</string>
+    <string name="detail_kgd">Penanganan Medis Cepat Tanggap</string>
+    <string name="head_pil">Sentera Informasi Keracunan</string>
+    <string name="detail_sentera">Informasi Penanganan Keracunan \nDaerah DKI Jakarta</string>
+    <string name="img_pmi">img pmi</string>
+    <string name="head_pmi">Palang Merah Indonesia</string>
+    <string name="detail_pmi">Pelayanan darah dan Kemanusiaan\nDaerah DKI Jakarta</string>
+    <string name="head_cs">Pusat bantuan Kemenakes</string>
+    <string name="detail_cs">Layanan dan Informasi Kemenakes</string>
+    <string name="devider">devider</string>
+    <string name="img_cs">cs image</string>
+    <string name="head_news">News</string>
+    <string name="head_nws">Berita Terbaru</string>
+    <string name="more_news">Berita terkini terkait</string>
+    <string name="more_nws">Lihat Semua</string>
+    <string name="head_berita1">Medic</string>
+    <string name="head_berita2">News</string>
+    <string name="dtil_news">Kumpulan tips kesehatan, informasi penyakit dan kesehatan yang\nlengkap dan terpercaya</string>
+    <string name="headline_snk">Syarat dan Kententuan</string>
+    <string name="btn_snk">btn_snk</string>
+    <string name="detial_snk">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
+    <string name="headline_kontak">image kontak</string>
+    <string name="btn_kontak">btn_kontak</string>
+    <string name="headline_vapp">image cs</string>
+    <string name="headline_versiapp">Versi Aplikasi</string>
+    <string name="btn_vapp">versi app</string>
+    <string name="versi_app">Saat ini versi Selfmedic yang anda install yaitu Beta Version</string>
+
+    <string name="divider">devider</string>
+    <string name="scrollviewhome">scrollvew news</string>
+    <string name="detial_kontak">Jika adnda mengalami kendala atau ada pertanyaan lainnya terkait penggunaan aplikasi SelfMedic. anda bisa mengirimkan ke :\nEmail    : helpdesk@selfmedic.com\nTelfon   : 12345\nwhatsapp : 08123445767</string>
+    <string name="img_pill">img pill</string>
 
     // Diari Kesehatan
     <string name="pencatatan_tekanan_darah">Pencatatan Tekanan Darah</string>
