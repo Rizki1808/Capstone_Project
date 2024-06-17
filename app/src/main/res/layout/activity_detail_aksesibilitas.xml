@@ -31,27 +31,25 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/back_up"
-        app:layout_constraintStart_toEndOf="@+id/back_up"
-        app:layout_constraintTop_toTopOf="@+id/back_up"
+        app:layout_constraintBottom_toBottomOf="@id/back_up"
+        app:layout_constraintStart_toEndOf="@id/back_up"
+        app:layout_constraintTop_toTopOf="@id/back_up"
         app:layout_constraintVertical_bias="0.066" />
 
     <Switch
         android:id="@+id/btn_switch"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_swicth"
+        app:layout_constraintBottom_toBottomOf="@id/tv_swicth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.778"
-        app:layout_constraintStart_toEndOf="@+id/tv_swicth"
-        app:layout_constraintTop_toTopOf="@+id/tv_swicth"
-        app:layout_constraintVertical_bias="0.538"
+        app:layout_constraintStart_toEndOf="@id/tv_swicth"
+        app:layout_constraintTop_toTopOf="@id/tv_swicth"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <TextView
         android:id="@+id/tv_swicth"
-        android:layout_width="171dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:fontFamily="@font/ibm_plex_sans_medium"
         android:text="@string/tv_akesibilitas"

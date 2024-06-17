@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalCoroutinesApi::class)
+
 package com.example.capstoneproject.data
 
 import androidx.paging.Pager
@@ -8,6 +10,7 @@ import com.example.capstoneproject.data.api.ApiService
 import com.example.capstoneproject.data.response.ListStoryItem
 import com.example.capstoneproject.data.response.UserModel
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitPagingSource
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flatMapLatest
 
