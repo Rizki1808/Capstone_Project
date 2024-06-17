@@ -151,7 +151,7 @@
                     android:background="@drawable/rounded_border"
                     android:ems="10"
                     android:hint="@string/masukkan_password"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPassword"
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 

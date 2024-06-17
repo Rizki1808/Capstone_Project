@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
-    private const val BASE_URL = "https://story-api.dicoding.dev/v1/"
+    private const val BASE_URL = "http://34.128.64.206:3000/"
 
     fun getApiService(token: String? = null): ApiService {
         val loggingInterceptor =

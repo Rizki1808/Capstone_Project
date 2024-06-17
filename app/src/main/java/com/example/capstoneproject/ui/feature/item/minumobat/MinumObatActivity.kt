@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.capstoneproject.data.ApplicationViewModelFactory
+import com.example.capstoneproject.data.tools.ApplicationViewModelFactory
 import com.example.capstoneproject.databinding.ActivityMinumObatBinding
 
 class MinumObatActivity : AppCompatActivity() {

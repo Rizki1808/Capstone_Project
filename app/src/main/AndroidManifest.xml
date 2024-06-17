@@ -33,7 +33,7 @@
             android:name=".ui.feature.item.diari.DiaryActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".ui.tools.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.CapstoneProject.NoActionBar">
             <intent-filter>

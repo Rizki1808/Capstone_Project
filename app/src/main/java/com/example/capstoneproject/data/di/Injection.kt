@@ -2,10 +2,10 @@ package com.example.capstoneproject.data.di
 
 import android.content.Context
 import android.util.Log
-import com.example.capstoneproject.data.UserPreference
-import com.example.capstoneproject.data.UserRepository
+import com.example.capstoneproject.data.tools.UserPreference
+import com.example.capstoneproject.data.tools.UserRepository
 import com.example.capstoneproject.data.api.ApiConfig
-import com.example.capstoneproject.data.dataStore
+import com.example.capstoneproject.data.tools.dataStore
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 

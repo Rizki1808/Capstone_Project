@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.capstoneproject.data.UserRepository
+import com.example.capstoneproject.data.tools.UserRepository
 import com.example.capstoneproject.data.api.ApiConfig
 import com.example.capstoneproject.data.response.UserModel
 import com.example.capstoneproject.data.response.UserResponse

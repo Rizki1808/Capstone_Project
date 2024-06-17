@@ -11,7 +11,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.capstoneproject.ui.main.MainActivity
-import com.example.capstoneproject.data.ViewModelFactory
+import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.ActivitySignInBinding
 import com.example.capstoneproject.ui.login.signup.SignUpActivity
 

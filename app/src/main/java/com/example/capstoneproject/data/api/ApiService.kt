@@ -18,9 +18,16 @@ interface ApiService {
         @Field("password") password: String
     ): Call<UserResponse>
 
-    @GET("stories")
-    suspend fun getStories(
-        @Query("page") page: Int,
-        @Query("size") size: Int
-    ): DiseasesResponse
+    @FormUrlEncoded
+    @POST("register")
+    fun register(
+        @Field("email") email: String,
+        @Field("password") password: String,
+        @Field("full_name") name: String,
+        @Field("date_of_birth") dateOfBirth: String,
+        @Field("gender") gender: String
+    ): Call<UserResponse>
+
+    @GET("diseases")
+    suspend fun getDiseases(): DiseasesResponse
 }

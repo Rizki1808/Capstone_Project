@@ -5,16 +5,14 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.capstoneproject.R
-import com.example.capstoneproject.data.ViewModelFactory
+import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.ActivityMainBinding
 import com.example.capstoneproject.ui.login.signin.SignInActivity
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 

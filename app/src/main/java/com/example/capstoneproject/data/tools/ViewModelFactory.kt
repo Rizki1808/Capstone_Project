@@ -1,4 +1,4 @@
-package com.example.capstoneproject.data
+package com.example.capstoneproject.data.tools
 
 import android.content.Context
 import androidx.lifecycle.ViewModelProvider
@@ -17,6 +17,9 @@ class ViewModelFactory(private val repository: UserRepository) :
         return when {
             modelClass.isAssignableFrom(SignInViewModel::class.java) -> {
                 SignInViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(SignUpViewModel::class.java) -> {
+                SignUpViewModel(repository) as T
             }
             modelClass.isAssignableFrom(MainViewModel::class.java) -> {
                 MainViewModel(repository) as T

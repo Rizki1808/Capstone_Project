@@ -21,7 +21,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.R
-import com.example.capstoneproject.data.ApplicationViewModelFactory
+import com.example.capstoneproject.data.tools.ApplicationViewModelFactory
 import com.example.capstoneproject.data.database.Drugs
 import com.example.capstoneproject.data.helper.DateHelper
 import com.example.capstoneproject.databinding.ActivityTambahObatBinding

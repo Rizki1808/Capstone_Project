@@ -1,4 +1,4 @@
-package com.example.capstoneproject.data
+package com.example.capstoneproject.data.tools
 
 import android.content.Context
 import androidx.datastore.core.DataStore

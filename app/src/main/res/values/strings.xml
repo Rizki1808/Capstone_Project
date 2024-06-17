@@ -43,6 +43,15 @@
     <string name="email_text">useremail0@gmail.com</string>
     <string name="btn_edit_profile">Edit Profile</string>
     <string name="headline_profile">Informasi Umum</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="masukan_nama_lengkap">Masukan Nama Lengkap</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="masukan_tanggal_lahir">Masukan Tanggal Lahir</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 
     // Fitur Pendeteksi
     <string name="preview_image">Preview Image</string>
@@ -102,5 +111,6 @@
     <string name="sistolik">Sistolik</string>
     <string name="contoh_60">Contoh: 60</string>
     <string name="diastolik">Diastolik</string>
+
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.capstoneproject.ui
+package com.example.capstoneproject.ui.tools
 
 import android.annotation.SuppressLint
 import android.content.Intent
