@@ -89,4 +89,18 @@
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
 
+    // Diari Kesehatan
+    <string name="pencatatan_tekanan_darah">Pencatatan Tekanan Darah</string>
+    <string name="description_pressure">Rutin memantau tekanan darah untuk menjaga kesehatan jantung Anda</string>
+    <string name="pencatatan_gula_darah">Pencatatan Gula Darah</string>
+    <string name="description_sugar">Rutin mengukur gula darah untuk hidup yang lebih sehat</string>
+    <string name="tambah_catatan_darah">Tambah Catatan Darah</string>
+    <string name="tanggal_periksa">Tanggal Periksa</string>
+    <string name="pilih_tanggal">Pilih Tanggal</string>
+    <string name="pilih_waktu">Pilih Waktu</string>
+    <string name="waktu_periksa">Waktu Periksa</string>
+    <string name="sistolik">Sistolik</string>
+    <string name="contoh_60">Contoh: 60</string>
+    <string name="diastolik">Diastolik</string>
+
 </resources>

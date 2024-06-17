@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.feature.item.minumobat.TambahObatActivity">
+    tools:context=".ui.feature.item.diari.tekanandarah.TambahTekananActivity">
 
     <View
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ibm_plex_sans_semibold"
-                android:text="@string/pengingat_minum_obat"
+                android:text="@string/tambah_catatan_darah"
                 android:textColor="@color/blue_500"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -78,28 +78,28 @@
                         android:layout_height="96dp"
                         android:layout_marginTop="32dp"
                         android:contentDescription="@string/pengingat_minum_obat"
-                        android:src="@drawable/medicine"
+                        android:src="@drawable/blood_pressure"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:ignore="ImageContrastCheck" />
 
-                    <!-- Nama Obat TextView -->
+                    <!-- Tanggal Periksa TextView -->
                     <TextView
-                        android:id="@+id/obatTextView"
+                        android:id="@+id/tglTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/ibm_plex_sans_semibold"
-                        android:text="@string/nama_obat"
+                        android:text="@string/tanggal_periksa"
                         android:textColor="@color/black_700"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-                    <!-- Nama Obat TextInputLayout -->
+                    <!-- Tanggal Periksa TextInputLayout -->
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/obatEditTextLayout"
+                        android:id="@+id/tglEditTextLayout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
@@ -107,36 +107,38 @@
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/obatTextView"
-                        app:layout_constraintTop_toBottomOf="@+id/obatTextView">
+                        app:layout_constraintStart_toStartOf="@+id/tglTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/tglTextView">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_nama_obat"
+                            android:id="@+id/ed_tgl"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
                             android:ems="10"
-                            android:hint="@string/masukkan_nama_obat"
-                            android:inputType="text"
+                            android:hint="@string/pilih_tanggal"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:drawableEnd="@drawable/ic_date_range_24"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Dosis TextView -->
+                    <!-- Waktu Periksa TextView -->
                     <TextView
-                        android:id="@+id/dosisTextView"
+                        android:id="@+id/waktuPeriksaTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/ibm_plex_sans_semibold"
-                        android:text="@string/dosis"
+                        android:text="@string/waktu_periksa"
                         android:textColor="@color/black_700"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/obatEditTextLayout" />
+                        app:layout_constraintTop_toBottomOf="@+id/tglEditTextLayout" />
 
-                    <!-- Dosis TextInputLayout -->
+                    <!-- Waktu Periksa TextInputLayout -->
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/dosisEditTextLayout"
+                        android:id="@+id/waktuPeriksaEditTextLayout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
@@ -144,74 +146,37 @@
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/dosisTextView"
-                        app:layout_constraintTop_toBottomOf="@+id/dosisTextView">
+                        app:layout_constraintStart_toStartOf="@+id/waktuPeriksaTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/waktuPeriksaTextView">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_dosis"
+                            android:id="@+id/ed_waktu_periksa"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
                             android:ems="10"
-                            android:hint="@string/masukkan_dosis"
-                            android:inputType="text"
-                            tools:ignore="SpeakableTextPresentCheck" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <!-- Jam Minum Obat TextView -->
-                    <TextView
-                        android:id="@+id/jamMinumTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="20dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/ibm_plex_sans_semibold"
-                        android:text="@string/jam_minum_obat"
-                        android:textColor="@color/black_700"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/dosisEditTextLayout" />
-
-                    <!-- Jam Minum Obat TextInputLayout -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/jamMinumEditTextLayout"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="55dp"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginEnd="32dp"
-                        app:hintEnabled="false"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/jamMinumTextView"
-                        app:layout_constraintTop_toBottomOf="@+id/jamMinumTextView">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_jam_minum"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/rounded_border"
-                            android:ems="10"
-                            android:hint="@string/masukkan_jam_minum_obat"
+                            android:hint="@string/pilih_waktu"
                             android:inputType="none"
                             android:focusable="false"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Aturan Minum TextView -->
+                    <!-- Sistolik TextView -->
                     <TextView
-                        android:id="@+id/aturanTextView"
+                        android:id="@+id/sistolikTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/ibm_plex_sans_semibold"
-                        android:text="@string/aturan_minum"
+                        android:text="@string/sistolik"
                         android:textColor="@color/black_700"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/jamMinumEditTextLayout" />
+                        app:layout_constraintTop_toBottomOf="@+id/waktuPeriksaEditTextLayout" />
 
-                    <!-- Aturan Minum TextInputLayout -->
+                    <!-- Sistolik TextInputLayout -->
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/aturanEditTextLayout"
+                        android:id="@+id/sistolikEditTextLayout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
@@ -219,36 +184,36 @@
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/aturanTextView"
-                        app:layout_constraintTop_toBottomOf="@+id/aturanTextView">
+                        app:layout_constraintStart_toStartOf="@+id/sistolikTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/sistolikTextView">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_aturan"
+                            android:id="@+id/ed_sistolik"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
                             android:ems="10"
-                            android:hint="@string/masukkan_aturan_minum"
+                            android:hint="@string/contoh_60"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Catatan (Opsional) TextView -->
+                    <!-- Diastolik TextView -->
                     <TextView
-                        android:id="@+id/catatanTextView"
+                        android:id="@+id/diastolikTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/ibm_plex_sans_semibold"
-                        android:text="@string/catatan_opsional"
+                        android:text="@string/diastolik"
                         android:textColor="@color/black_700"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/aturanEditTextLayout" />
+                        app:layout_constraintTop_toBottomOf="@+id/sistolikEditTextLayout" />
 
-                    <!-- Catatan (Opsional) TextInputLayout -->
+                    <!-- Diastolik TextInputLayout -->
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/catatanEditTextLayout"
+                        android:id="@+id/diastolikEditTextLayout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
@@ -256,16 +221,16 @@
                         android:layout_marginEnd="32dp"
                         app:hintEnabled="false"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/catatanTextView"
-                        app:layout_constraintTop_toBottomOf="@+id/catatanTextView">
+                        app:layout_constraintStart_toStartOf="@+id/diastolikTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/diastolikTextView">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_catatan"
+                            android:id="@+id/ed_diastolik"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
                             android:ems="10"
-                            android:hint="@string/masukkan_catatan"
+                            android:hint="@string/contoh_60"
                             android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -279,9 +244,9 @@
                         android:fontFamily="@font/ibm_plex_sans_semibold"
                         android:text="@string/simpan"
                         android:textAllCaps="false"
-                        app:layout_constraintEnd_toEndOf="@+id/catatanEditTextLayout"
-                        app:layout_constraintStart_toStartOf="@+id/catatanEditTextLayout"
-                        app:layout_constraintTop_toBottomOf="@+id/catatanEditTextLayout" />
+                        app:layout_constraintEnd_toEndOf="@+id/diastolikEditTextLayout"
+                        app:layout_constraintStart_toStartOf="@+id/diastolikEditTextLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/diastolikEditTextLayout" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
