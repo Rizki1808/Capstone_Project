@@ -43,7 +43,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.profile.EditProfile.EditProfileFragment"
+            android:name=".ui.profile.detail.DetailNGD"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.detail.DetailTentang"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.detail.DetailAksesibilitas"
             android:exported="false" />
         <activity
             android:name=".ui.feature.item.minumobat.TambahObatActivity"

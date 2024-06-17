@@ -8,6 +8,7 @@
     tools:context=".ui.profile.ProfileFragment"
     >
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,6 +29,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibm_plex_sans_bold"
                 android:text="@string/this_is_profile_fragment"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -38,20 +40,23 @@
                 app:layout_constraintHorizontal_bias="0.03"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.011" />
+                app:layout_constraintVertical_bias="0.011"
+                tools:ignore="TextSizeCheck" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/image_profile_container"
-                android:layout_width="218dp"
-                android:layout_height="237dp"
+                android:layout_width="210dp"
+                android:layout_height="190dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/nav_view"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.114"
-                tools:ignore="ImageConstantsCheck">
+                app:layout_constraintVertical_bias="0.155"
+                tools:ignore="ImageConstantsCheck,TextSizeCheck">
+
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -64,13 +69,15 @@
                     app:layout_constraintHorizontal_bias="0.494"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.052" />
+                    app:layout_constraintVertical_bias="0.052"
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:id="@+id/name_profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
                     android:text="@string/name_profile"
                     android:textColor="#1F1F1F"
                     android:textSize="14sp"
@@ -80,34 +87,20 @@
                     app:layout_constraintHorizontal_bias="0.496"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView3"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintVertical_bias="0.15" />
 
                 <TextView
                     android:id="@+id/email_user_profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans"
                     android:text="@string/email_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.508"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView3"
-                    app:layout_constraintVertical_bias="0.272" />
-
-                <Button
-                    android:id="@+id/btn_edit_profile"
-                    android:layout_width="210dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/rounded_button_profile"
-                    android:backgroundTint="@color/grey_btn"
-                    android:text="@string/btn_edit_profile"
-                    android:textColor="@color/grey_text_btn"
-                    android:textAllCaps="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.559"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/email_user_profile"
-                    app:layout_constraintVertical_bias="0.298" />
+                    app:layout_constraintVertical_bias="1.0" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -115,23 +108,23 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/menu_profile_btn"
                 android:layout_width="392dp"
-                android:layout_height="495dp"
+                android:layout_height="380dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@+id/nav_view"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.526"
+                app:layout_constraintHorizontal_bias="0.473"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/image_profile_container"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintVertical_bias="0.047">
 
                 <TextView
                     android:id="@+id/txt_headline_profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:fontFamily="@font/ibm_plex_sans_bold"
                     android:text="@string/headline_profile"
-                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.078"
                     app:layout_constraintStart_toStartOf="parent"
@@ -139,72 +132,75 @@
 
                 <Button
                     android:id="@+id/btn_ambulance"
-                    android:layout_width="348dp"
-                    android:layout_height="52dp"
-                    android:layout_marginBottom="284dp"
+                    android:layout_width="340dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="16dp"
+                    android:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
                     android:background="@drawable/rounded_button"
                     android:drawableLeft="@drawable/ic_ambulance"
                     android:drawableRight="@drawable/ic_next"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingEnd="15dp"
+                    android:paddingRight="20dp"
                     android:text="@string/btn_ngd"
-                    android:textColor="@color/grey_text_btn"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textAllCaps="false"
+                    android:textColor="#49454F"
+
+                    android:textSize="15sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_headline_profile"
-                    app:layout_constraintVertical_bias="0.075" />
-
-                <Button
-                    android:id="@+id/btn_language"
-                    android:layout_width="348dp"
-                    android:layout_height="52dp"
-                    android:layout_marginBottom="284dp"
-                    android:background="@drawable/rounded_button"
-                    android:backgroundTint="@color/grey_btn"
-                    android:drawableLeft="@drawable/ic_language"
-                    android:drawableRight="@drawable/ic_next"
-                    android:text="@string/btn_language"
-                    android:textColor="@color/grey_text_btn"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_ambulance"
-                    app:layout_constraintVertical_bias="0.192" />
+                    tools:ignore="RtlHardcoded,TextContrastCheck" />
 
                 <Button
                     android:id="@+id/btn_aksi"
-                    android:layout_width="348dp"
-                    android:layout_height="52dp"
+                    android:layout_width="340dp"
+                    android:layout_height="54dp"
                     android:background="@drawable/rounded_button"
                     android:backgroundTint="@color/grey_btn"
                     android:drawableLeft="@drawable/ic_aksesibilitas"
                     android:drawableRight="@drawable/ic_next"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:text="@string/aksesibilitas_btn"
-                    android:textColor="@color/grey_text_btn"
+                    android:textAllCaps="false"
+                    android:textColor="#49454F"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_language"
-                    app:layout_constraintVertical_bias="0.043" />
+                    app:layout_constraintEnd_toEndOf="@+id/btn_ambulance"
+                    app:layout_constraintHorizontal_bias="0.571"
+                    app:layout_constraintStart_toStartOf="@+id/btn_ambulance"
+                    app:layout_constraintTop_toBottomOf="@id/btn_ambulance"
+                    app:layout_constraintVertical_bias="0.062"
+                    tools:ignore="RtlHardcoded,TextContrastCheck" />
 
                 <Button
                     android:id="@+id/btn_info"
-                    android:layout_width="348dp"
-                    android:layout_height="52dp"
+                    android:layout_width="340dp"
+                    android:layout_height="54dp"
                     android:background="@drawable/rounded_button"
                     android:backgroundTint="@color/grey_btn"
                     android:drawableLeft="@drawable/ic_info"
                     android:drawableRight="@drawable/ic_next"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:text="@string/info_btn"
-                    android:textColor="@color/grey_text_btn"
+                    android:textAllCaps="false"
+                    android:textColor="#49454F"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_aksi"
+                    app:layout_constraintStart_toStartOf="@+id/btn_aksi"
                     app:layout_constraintTop_toBottomOf="@+id/btn_aksi"
-                    app:layout_constraintVertical_bias="0.054" />
+                    app:layout_constraintVertical_bias="0.076"
+                    tools:ignore="RtlHardcoded,TextContrastCheck" />
 
                 <ImageView
                     android:id="@+id/devinder_profile"
@@ -214,28 +210,32 @@
                     android:contentDescription="@string/line_divider"
                     android:src="@drawable/divider"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.472"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_info"
+                    app:layout_constraintStart_toStartOf="@+id/btn_info"
                     app:layout_constraintTop_toBottomOf="@id/btn_info"
-                    app:layout_constraintVertical_bias="0.043" />
+                    app:layout_constraintVertical_bias="0.066" />
 
                 <Button
                     android:id="@+id/btn_logout"
-                    android:layout_width="348dp"
-                    android:layout_height="52dp"
+                    android:layout_width="340dp"
+                    android:layout_height="54dp"
                     android:background="@drawable/rounded_button"
                     android:backgroundTint="@color/grey_btn"
                     android:drawableLeft="@drawable/ic_logout"
                     android:drawableRight="@drawable/ic_next"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:text="@string/logout_btn"
-                    android:textColor="@color/grey_text_btn"
+                    android:textAllCaps="false"
+                    android:textColor="#49454F"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_info"
+                    app:layout_constraintStart_toStartOf="@+id/btn_info"
                     app:layout_constraintTop_toBottomOf="@+id/devinder_profile"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="0.175"
+                    tools:ignore="RtlHardcoded,TextContrastCheck" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -250,7 +250,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:menu="@menu/bottom_nav_menu" />
+                app:menu="@menu/bottom_nav_menu"
+                tools:ignore="VisualLintBottomNav" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

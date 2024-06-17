@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.detail.DetailAksesibilitas">
+
+    <Button
+        android:id="@+id/back_up"
+        android:layout_width="49dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="11dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button"
+        android:drawableLeft="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/text_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="@string/tv_detail_akses"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/back_up"
+        app:layout_constraintStart_toEndOf="@id/back_up"
+        app:layout_constraintTop_toTopOf="@id/back_up"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <Switch
+        android:id="@+id/btn_switch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_swicth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_swicth"
+        app:layout_constraintTop_toTopOf="@id/tv_swicth"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/tv_swicth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:fontFamily="@font/ibm_plex_sans_medium"
+        android:text="@string/tv_akesibilitas"
+        android:textColor="@color/grey_500"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

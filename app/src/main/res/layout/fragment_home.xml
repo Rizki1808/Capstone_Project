@@ -273,6 +273,87 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line" >
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/haedline_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:contentDescription="@string/head_news"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/sv_home"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextSizeCheck">
+
+                    <TextView
+                        android:id="@+id/head_nws"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ibm_plex_sans_bold"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/head_nws"
+                        android:textColor="@color/blue_500"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/more_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ibm_plex_sans"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/more_news"
+                        android:textColor="@color/grey_txt"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/head_nws"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/head_nws"
+                        app:layout_constraintTop_toBottomOf="@+id/head_nws" />
+
+                    <TextView
+                        android:id="@+id/tvbtn_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/ibm_plex_sans"
+                        android:text="@string/more_nws"
+                        android:textColor="@color/blue_500"
+                        android:textSize="16sp"
+                        android:padding="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.907"
+                        app:layout_constraintStart_toEndOf="@+id/more_news"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.533" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/sv_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="56dp"
+                    android:contentDescription="@string/scrollviewhome"
+                    tools:layout_editor_absoluteX="0dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </HorizontalScrollView>
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.Guideline
