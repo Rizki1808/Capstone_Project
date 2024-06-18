@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.data.di.Injection
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitViewModel
+import com.example.capstoneproject.ui.feature.item.infopenyakit.detailpenyakit.DetailPenyakitViewModel
 import com.example.capstoneproject.ui.login.signin.SignInViewModel
 import com.example.capstoneproject.ui.login.signup.SignUpViewModel
 import com.example.capstoneproject.ui.main.MainViewModel
@@ -29,6 +30,9 @@ class ViewModelFactory(private val repository: UserRepository) :
             }
             modelClass.isAssignableFrom(InfoPenyakitViewModel::class.java) -> {
                 InfoPenyakitViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(DetailPenyakitViewModel::class.java) -> {
+                DetailPenyakitViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

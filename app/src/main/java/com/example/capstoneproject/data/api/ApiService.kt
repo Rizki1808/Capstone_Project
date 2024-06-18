@@ -7,7 +7,7 @@ import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.Path
 
 interface ApiService {
 
@@ -30,4 +30,9 @@ interface ApiService {
 
     @GET("diseases")
     suspend fun getDiseases(): DiseasesResponse
+
+    @GET("diseases/{id}")
+    suspend fun getDiseasesDetail(
+        @Path("id") id: String
+    ): DiseasesResponse
 }

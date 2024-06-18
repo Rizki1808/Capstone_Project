@@ -1,5 +1,6 @@
 package com.example.capstoneproject.ui.feature.item.infopenyakit
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -10,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capstoneproject.data.response.DataItem
 import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.ActivityInfoPenyakitBinding
-import com.example.capstoneproject.ui.login.signin.SignInActivity
+import com.example.capstoneproject.ui.feature.item.infopenyakit.detailpenyakit.DetailPenyakitActivity
 
 class InfoPenyakitActivity : AppCompatActivity() {
 
@@ -20,29 +21,22 @@ class InfoPenyakitActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInfoPenyakitBinding
     private lateinit var adapter: InfoPenyakitAdapter
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInfoPenyakitBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel.getSession().observe(this) { user ->
-            if (!user.isLogin) {
-                startActivity(Intent(this, SignInActivity::class.java))
-                finish()
-            }else {
-                viewModel.getDiseases()
-            }
-        }
         adapter = InfoPenyakitAdapter()
         adapter.notifyDataSetChanged()
 
-//        adapter.setOnItemClickCallback(object : InfoPenyakitAdapter.OnItemClickCallback {
-//            override fun onItemClickCallBack(data: DataItem) {
-//                val intent = Intent(this@InfoPenyakitActivity, DetailInfoPenyakitActivity::class.java)
-//                intent.putExtra(DetailInfoPenyakitActivity.EXTRA_DISEASE, data.id)
-//                startActivity(intent)
-//            }
-//        }
+        adapter.setOnItemClickCallback(object : InfoPenyakitAdapter.OnItemClickCallback {
+            override fun onItemClickCallBack(data: DataItem) {
+                val intent = Intent(this@InfoPenyakitActivity, DetailPenyakitActivity::class.java)
+                intent.putExtra(DetailPenyakitActivity.EXTRA_DISEASE, data.id)
+                startActivity(intent)
+            }
+        })
 
         binding.apply {
             rvUser.layoutManager = LinearLayoutManager(this@InfoPenyakitActivity)
