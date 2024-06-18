@@ -112,7 +112,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/ibm_plex_sans_semibold"
-                            tools:text="@string/pengertian"
+                            android:text="@string/pengertian"
                             android:textSize="20sp" />
 
                         <TextView
@@ -129,7 +129,7 @@
                             android:fontFamily="@font/ibm_plex_sans_semibold"
                             android:textSize="16sp"
                             android:layout_marginTop="4dp"
-                            tools:text="Pencegahan" />
+                            android:text="@string/pencegahan" />
 
                         <TextView
                             android:id="@+id/prevention"
@@ -145,7 +145,7 @@
                             android:fontFamily="@font/ibm_plex_sans_semibold"
                             android:textSize="16sp"
                             android:layout_marginTop="4dp"
-                            tools:text="Pengobatan" />
+                            android:text="@string/pengobatan" />
 
                         <TextView
                             android:id="@+id/treatment"
@@ -155,13 +155,26 @@
                             android:layout_marginTop="4dp"
                             tools:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
 
-                        <TextView
-                            android:id="@+id/lastUpdate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12sp"
-                            android:layout_marginTop="8dp"
-                            tools:text="Terakhir Diperbarui" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="2dp"
+                                android:text="@string/terakhir_diperbarui"
+                                tools:ignore="SmallSp" />
+                            <TextView
+                                android:id="@+id/lastUpdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:layout_marginTop="12dp"
+                                tools:text="Terakhir Diperbarui"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
 
                     </LinearLayout>
 

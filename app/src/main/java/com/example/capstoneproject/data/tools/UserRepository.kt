@@ -2,6 +2,7 @@ package com.example.capstoneproject.data.tools
 
 import com.example.capstoneproject.data.api.ApiService
 import com.example.capstoneproject.data.response.DiseasesResponse
+import com.example.capstoneproject.data.response.DiseasesDetailResponse
 import com.example.capstoneproject.data.response.UserModel
 import kotlinx.coroutines.flow.Flow
 
@@ -22,7 +23,7 @@ class UserRepository private constructor(
         return apiService.getDiseases()
     }
 
-    suspend fun getDiseaseDetail(id: String): DiseasesResponse {
+    suspend fun getDiseaseDetail(id: String): DiseasesDetailResponse {
         return apiService.getDiseasesDetail(id)
     }
 

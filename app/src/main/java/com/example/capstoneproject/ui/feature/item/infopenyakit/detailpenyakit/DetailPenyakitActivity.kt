@@ -30,6 +30,7 @@ class DetailPenyakitActivity : AppCompatActivity() {
 
         viewModel.diseases.observe(this, Observer { result ->
             result.onSuccess { diseases ->
+                println("Fetched disease detail: $diseases")
                 binding.apply {
                     tvNamaPenyakit.text = diseases.name
                     description.text = diseases.description
@@ -37,7 +38,7 @@ class DetailPenyakitActivity : AppCompatActivity() {
                     treatment.text = diseases.treatment
                     lastUpdate.text = diseases.updatedAt
                     Glide.with(this@DetailPenyakitActivity)
-                        .load(diseases.imageURL)
+                        .load(diseases.image)
                         .into(ivPreviewImagePenyakit)
                 }
                 showLoading(false)

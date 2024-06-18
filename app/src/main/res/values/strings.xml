@@ -151,6 +151,9 @@
     <string name="diastolik">Diastolik</string>
     <string name="pengertian">Pengertian</string>
     <string name="nama_penyakit">Nama Penyakit</string>
+    <string name="pencegahan">Pencegahan</string>
+    <string name="pengobatan">Pengobatan</string>
+    <string name="terakhir_diperbarui">Terakhir Diperbarui:</string>
 
 
 </resources>
