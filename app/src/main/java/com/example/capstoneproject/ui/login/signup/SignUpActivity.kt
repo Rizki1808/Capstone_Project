@@ -6,12 +6,10 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.capstoneproject.R
 import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.ActivitySignUpBinding
 import com.example.capstoneproject.ui.login.signin.SignInActivity
 import com.example.capstoneproject.ui.tools.DatePickerFragment
-import com.google.android.material.textfield.TextInputEditText
 import androidx.lifecycle.Observer
 
 class SignUpActivity : AppCompatActivity() {

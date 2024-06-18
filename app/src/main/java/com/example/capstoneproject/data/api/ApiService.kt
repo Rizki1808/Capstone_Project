@@ -3,6 +3,7 @@ package com.example.capstoneproject.data.api
 import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
 import com.example.capstoneproject.data.response.PressureResponse
+import com.example.capstoneproject.data.response.UploadPressureResponse
 import com.example.capstoneproject.data.response.UserResponse
 import retrofit2.Call
 import retrofit2.http.Field
@@ -40,4 +41,13 @@ interface ApiService {
 
     @GET("blood-pressure")
     suspend fun getPressure(): PressureResponse
+
+    @FormUrlEncoded
+    @POST("blood-pressure")
+    suspend fun postBloodPressure(
+        @Field("sistolik") sistolik: Int,
+        @Field("distolik") distolik: Int,
+        @Field("check_date") checkDate: String,
+        @Field("check_time") checkTime: String
+    ): UploadPressureResponse
 }

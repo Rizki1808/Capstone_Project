@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.ActivityTekananBinding
 import androidx.lifecycle.Observer
+import com.example.capstoneproject.ui.feature.item.diari.tekanandarah.tambahtekanan.TambahTekananActivity
 
 class TekananActivity : AppCompatActivity() {
 

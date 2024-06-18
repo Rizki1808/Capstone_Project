@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.feature.item.diari.tekanandarah.TambahTekananActivity">
+    tools:context=".ui.feature.item.diari.tekanandarah.tambahtekanan.TambahTekananActivity">
 
     <View
         android:layout_width="match_parent"
@@ -117,8 +117,7 @@
                             android:background="@drawable/rounded_border"
                             android:ems="10"
                             android:hint="@string/pilih_tanggal"
-                            android:inputType="none"
-                            android:focusable="false"
+                            android:inputType="text"
                             android:drawableEnd="@drawable/ic_date_range_24"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -150,14 +149,13 @@
                         app:layout_constraintTop_toBottomOf="@+id/waktuPeriksaTextView">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_waktu_periksa"
+                            android:id="@+id/ed_waktu"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
                             android:ems="10"
                             android:hint="@string/pilih_waktu"
-                            android:inputType="none"
-                            android:focusable="false"
+                            android:inputType="text"
                             tools:ignore="SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -255,5 +253,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

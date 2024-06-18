@@ -24,7 +24,7 @@
             android:name=".ui.feature.item.infopenyakit.detailpenyakit.DetailPenyakitActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.diari.tekanandarah.TambahTekananActivity"
+            android:name=".ui.feature.item.diari.tekanandarah.tambahtekanan.TambahTekananActivity"
             android:exported="false" />
         <activity
             android:name=".ui.feature.item.diari.guladarah.GulaActivity"
