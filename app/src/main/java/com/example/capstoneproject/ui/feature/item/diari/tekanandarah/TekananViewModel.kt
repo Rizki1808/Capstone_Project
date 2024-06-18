@@ -1,29 +1,29 @@
-package com.example.capstoneproject.ui.feature.item.infopenyakit
+package com.example.capstoneproject.ui.feature.item.diari.tekanandarah
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.capstoneproject.data.response.DiseasesResponse
+import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.tools.UserRepository
 import kotlinx.coroutines.launch
 
-class InfoPenyakitViewModel(private val repository: UserRepository) : ViewModel() {
+class TekananViewModel(private val userRepository: UserRepository) : ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> get() = _isLoading
 
-    private val _diseases = MutableLiveData<Result<DiseasesResponse>>()
-    val diseases: LiveData<Result<DiseasesResponse>> get() = _diseases
+    private val _pressure = MutableLiveData<Result<PressureResponse>>()
+    val pressure: LiveData<Result<PressureResponse>> get() = _pressure
 
-    fun getDiseases() {
+    fun getPressure() {
         _isLoading.value = true
         viewModelScope.launch {
             try {
-                val result = repository.getDiseases()
-                _diseases.value = Result.success(result)
+                val result = userRepository.getPressure()
+                _pressure.value = Result.success(result)
             } catch (e: Exception) {
-                _diseases.value = Result.failure(e)
+                _pressure.value = Result.failure(e)
             } finally {
                 _isLoading.value = false
             }

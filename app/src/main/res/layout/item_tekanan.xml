@@ -46,9 +46,9 @@
             android:layout_marginTop="8dp"
             android:textColor="@color/black"
             android:textStyle="bold"
+            android:text="@string/tekanan_darah"
             app:layout_constraintStart_toEndOf="@+id/cardViewImage"
-            app:layout_constraintTop_toTopOf="@+id/cardViewImage"
-            tools:text="Name" />
+            app:layout_constraintTop_toTopOf="@+id/cardViewImage" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -60,15 +60,18 @@
             app:layout_constraintTop_toBottomOf="@+id/tvName">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_500"
+                android:layout_marginEnd="4dp"
+                android:text="@string/sistolik" />
+
+            <TextView
                 android:id="@+id/tvSistolik"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_500"
-                app:layout_constraintBottom_toBottomOf="@+id/cardViewImage"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/tvTitle"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-                tools:text="Sistolik 60" />
+                tools:text="60" />
 
             <View
                 android:layout_width="5dp"
@@ -79,11 +82,18 @@
                 android:background="@color/grey_100" />
 
             <TextView
-                android:id="@+id/tvInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:textColor="@color/grey_500"
+                android:text="@string/diastolik" />
+
+            <TextView
+                android:id="@+id/tvDiastolik"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_500"
-                tools:text="Diastolik 60" />
+                tools:text="60" />
         </LinearLayout>
 
         <LinearLayout
@@ -94,10 +104,25 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" >
 
             <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_500"
+                android:textSize="12sp"
+                android:text="@string/tanggal" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/grey_100" />
+
+            <TextView
                 android:id="@+id/tvTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:textColor="@color/grey_500"
                 android:textSize="12sp"
                 tools:text="08:00" />

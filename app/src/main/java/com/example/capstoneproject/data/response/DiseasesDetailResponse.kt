@@ -12,7 +12,7 @@ data class DataDetail(
 	val createdAt: String? = null,
 	val name: String? = null,
 	val description: String? = null,
-	val Id: Int? = null,
+	val id: Int? = null,
 	val prevention: String? = null,
 	val updatedAt: String? = null
 )

@@ -2,6 +2,7 @@ package com.example.capstoneproject.data.api
 
 import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
+import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.response.UserResponse
 import retrofit2.Call
 import retrofit2.http.Field
@@ -36,4 +37,7 @@ interface ApiService {
     suspend fun getDiseasesDetail(
         @Path("id") id: String
     ): DiseasesDetailResponse
+
+    @GET("blood-pressure")
+    suspend fun getPressure(): PressureResponse
 }
