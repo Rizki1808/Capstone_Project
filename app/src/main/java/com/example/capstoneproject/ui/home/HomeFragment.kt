@@ -6,8 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.capstoneproject.data.response.Article
+import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.FragmentHomeBinding
+import com.example.capstoneproject.ui.explore.DetailExploreActivity
+import com.example.capstoneproject.ui.explore.ExploreAdapter
+import com.example.capstoneproject.ui.explore.ExploreViewModel
 import com.example.capstoneproject.ui.feature.FeatureFragment
 import com.example.capstoneproject.ui.feature.item.diari.DiaryActivity
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
@@ -20,18 +27,53 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private lateinit var exploreViewModel: ExploreViewModel
+    private lateinit var horizontalAdapter: ExploreAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        savedInstanceState: Bundle?): View {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        // Initialize ViewModel
+        val factory = ViewModelFactory.getInstance(requireContext())
+        exploreViewModel = ViewModelProvider(this, factory).get(ExploreViewModel::class.java)
+
+        // Set up horizontal RecyclerView
+        horizontalAdapter = ExploreAdapter()
+        horizontalAdapter.notifyDataSetChanged()
+
+        horizontalAdapter.setOnItemClickCallback(object : ExploreAdapter.OnItemClickCallback {
+            override fun onItemClickCallBack(data: Article) {
+                val intent = Intent(context, DetailExploreActivity::class.java)
+                intent.putExtra(DetailExploreActivity.EXTRA_URL, data.url)
+                startActivity(intent)
+            }
+        })
+
+        binding.rvNews.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            setHasFixedSize(true)
+            adapter = horizontalAdapter
+        }
+
+        // Observe data from ViewModel
+        exploreViewModel.news.observe(viewLifecycleOwner, Observer { result ->
+            result.onSuccess { newsResponse ->
+                ArrayList(newsResponse.articles).let { horizontalAdapter.setData(it) }
+            }
+            result.onFailure { exception ->
+                // Handle error
+            }
+        })
+
+        // Fetch news data
+        exploreViewModel.getNews()
+
+        // Set onClickListeners for other features
         binding.icInfoPenyakit.setOnClickListener {
             val intent = Intent(activity, InfoPenyakitActivity::class.java)
             startActivity(intent)

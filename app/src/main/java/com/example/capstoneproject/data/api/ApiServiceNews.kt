@@ -20,6 +20,6 @@ import retrofit2.http.Part
 import retrofit2.http.Path
 
 interface ApiServiceNews {
-    @GET("v2/top-headlines?country=id&category=health&apiKey=90a7526947dc4f87b30e797cc07acb9f")
+    @GET("v2/top-headlines?country=us&category=health&apiKey=90a7526947dc4f87b30e797cc07acb9f")
     suspend fun getTopHeadlines(): NewsResponse
 }

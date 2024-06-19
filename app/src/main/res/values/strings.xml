@@ -162,6 +162,9 @@
     <string name="mg_dl">mg/dl</string>
     <string name="tambah_tekanan_darah">Tambah Tekanan Darah</string>
     <string name="tambah_gula_darah">Tambah Gula Darah</string>
+    <string name="berita_terbaru">Berita Terbaru</string>
+    <string name="berita_terkini_terkait">Berita Terkini Terkait</string>
+    <string name="lihat_semua">Lihat Semua</string>
 
 
 </resources>

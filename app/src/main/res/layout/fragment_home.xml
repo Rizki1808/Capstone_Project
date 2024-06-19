@@ -17,369 +17,346 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/text_akses_cepat"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/ibm_plex_sans_reguler"
-                android:text="@string/akses_cepat"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@id/guideline2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_akses_cepat">
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_akses_cepat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/ibm_plex_sans_reguler"
+                    android:text="@string/akses_cepat"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
+                    android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:baselineAligned="false"
-                    android:gravity="center_horizontal">
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_akses_cepat">
 
                     <LinearLayout
-                        android:id="@+id/ic_infoPenyakit"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical"
-                        tools:ignore="UseCompoundDrawables">
+                        android:baselineAligned="false"
+                        android:gravity="center_horizontal">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="@string/info_penyakit"
-                            android:src="@drawable/ic_info_penyakit_24dp"
-                            app:tint="@color/green_500" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/ic_infoPenyakit"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="6dp"
-                            android:text="@string/info_penyakit"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="11sp" />
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="@string/info_penyakit"
+                                android:src="@drawable/ic_info_penyakit_24dp"
+                                app:tint="@color/green_500" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingHorizontal="6dp"
+                                android:text="@string/info_penyakit"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ic_pendeteksiKulit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="@string/pendeteksi_penyakit_kulit"
+                                android:src="@drawable/rash"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingHorizontal="6dp"
+                                android:text="@string/pendeteksi_penyakit_kulit"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ic_pendeteksiWajah"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="@string/pendeteksi_jerawat"
+                                android:src="@drawable/ic_face_head_bandage_24dp"
+                                app:tint="@color/pink_500"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingHorizontal="6dp"
+                                android:text="@string/pendeteksi_penyakit_wajah"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ic_rumahSakitTerdekat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="@string/rumah_sakit_terdekat"
+                                android:src="@drawable/ic_hospital_24dp"
+                                app:tint="@color/red_500" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingHorizontal="6dp"
+                                android:text="@string/rumah_sakit_terdekat"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/ic_pendeteksiKulit"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical"
-                        tools:ignore="UseCompoundDrawables">
+                        android:layout_marginTop="16dp"
+                        android:baselineAligned="false"
+                        android:gravity="center_horizontal">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="@string/pendeteksi_penyakit_kulit"
-                            android:src="@drawable/rash"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/ic_pengingatMinumObat"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="6dp"
-                            android:text="@string/pendeteksi_penyakit_kulit"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="11sp" />
-                    </LinearLayout>
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
-                    <LinearLayout
-                        android:id="@+id/ic_pendeteksiWajah"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical"
-                        tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="@string/pengingat_minum_obat"
+                                android:src="@drawable/ic_capsules_solid"
+                                app:tint="@color/red_500" />
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="@string/pendeteksi_jerawat"
-                            android:src="@drawable/ic_face_head_bandage_24dp"
-                            app:tint="@color/pink_500"
-                            tools:ignore="ImageContrastCheck" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingHorizontal="6dp"
+                                android:text="@string/pengingat_minum_obat"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/ic_diariKesehatan"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="6dp"
-                            android:text="@string/pendeteksi_penyakit_wajah"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="11sp" />
-                    </LinearLayout>
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
-                    <LinearLayout
-                        android:id="@+id/ic_rumahSakitTerdekat"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical"
-                        tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="@string/diari_kesehatan"
+                                android:src="@drawable/ic_notes_medical_24dp"
+                                app:tint="@color/coklat_700" />
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="@string/rumah_sakit_terdekat"
-                            android:src="@drawable/ic_hospital_24dp"
-                            app:tint="@color/red_500" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingHorizontal="6dp"
+                                android:text="@string/diari_kesehatan"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/ic_fiturLain"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="6dp"
-                            android:text="@string/rumah_sakit_terdekat"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="11sp" />
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="@string/fitur_lain"
+                                android:src="@drawable/ic_apps_add"
+                                app:tint="@color/grey_200"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingHorizontal="6dp"
+                                android:text="@string/fitur_lain"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" />
+
                     </LinearLayout>
 
                 </LinearLayout>
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/head_news"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:baselineAligned="false"
-                    android:gravity="center_horizontal">
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearLayout">
 
-                    <LinearLayout
-                        android:id="@+id/ic_pengingatMinumObat"
+                    <View
+                        android:id="@+id/line"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical"
-                        tools:ignore="UseCompoundDrawables">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="@string/pengingat_minum_obat"
-                            android:src="@drawable/ic_capsules_solid"
-                            app:tint="@color/red_500" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="6dp"
-                            android:text="@string/pengingat_minum_obat"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ic_diariKesehatan"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical"
-                        tools:ignore="UseCompoundDrawables">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="@string/diari_kesehatan"
-                            android:src="@drawable/ic_notes_medical_24dp"
-                            app:tint="@color/coklat_700" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="6dp"
-                            android:text="@string/diari_kesehatan"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ic_fiturLain"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical"
-                        tools:ignore="UseCompoundDrawables">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="@string/fitur_lain"
-                            android:src="@drawable/ic_apps_add"
-                            app:tint="@color/grey_200"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="6dp"
-                            android:text="@string/fitur_lain"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout8"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/guideline3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line" >
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/haedline_news"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:contentDescription="@string/head_news"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toTopOf="@+id/sv_home"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TextSizeCheck">
+                        android:layout_height="1dp"
+                        android:background="@color/grey_100"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/head_nws"
+                        android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/ibm_plex_sans_bold"
-                        android:paddingStart="18dp"
-                        android:paddingEnd="0dp"
-                        android:text="@string/head_nws"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/berita_terbaru"
                         android:textColor="@color/blue_500"
                         android:textSize="20sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/more_news"
+                        android:id="@+id/textView9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/ibm_plex_sans"
-                        android:paddingStart="18dp"
-                        android:paddingEnd="0dp"
-                        android:text="@string/more_news"
-                        android:textColor="@color/grey_txt"
-                        android:textSize="14sp"
-                        app:layout_constraintEnd_toEndOf="@+id/head_nws"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/head_nws"
-                        app:layout_constraintTop_toBottomOf="@+id/head_nws" />
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/berita_terkini_terkait"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/line2"
+                        app:layout_constraintStart_toStartOf="@+id/textView8"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
                     <TextView
-                        android:id="@+id/tvbtn_more"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:fontFamily="@font/ibm_plex_sans"
-                        android:text="@string/more_nws"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/lihat_semua"
                         android:textColor="@color/blue_500"
-                        android:textSize="16sp"
-                        android:padding="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_100"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.907"
-                        app:layout_constraintStart_toEndOf="@+id/more_news"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.533" />
-
+                        app:layout_constraintStart_toStartOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <HorizontalScrollView
-                    android:id="@+id/sv_home"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="56dp"
-                    android:contentDescription="@string/scrollviewhome"
-                    tools:layout_editor_absoluteX="0dp">
+                    android:layout_height="200dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/head_news">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_news"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:padding="16dp"
+                        android:clipToPadding="false"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:listitem="@layout/item_news"/>
 
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </HorizontalScrollView>
-
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.34" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.64" />
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:background="@color/grey_100"
-                app:layout_constraintTop_toTopOf="@id/guideline2"
-                app:layout_constraintBottom_toBottomOf="@id/guideline2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
     </androidx.cardview.widget.CardView>
 
