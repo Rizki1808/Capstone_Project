@@ -11,7 +11,7 @@ import com.example.capstoneproject.databinding.FragmentFeatureBinding
 import com.example.capstoneproject.ui.feature.item.diari.DiaryActivity
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
 import com.example.capstoneproject.ui.feature.item.minumobat.MinumObatActivity
-import com.example.capstoneproject.ui.feature.item.pendeteksijerawat.PendeteksiJerawatActivity
+import com.example.capstoneproject.ui.feature.item.pendeteksiwajah.PendeteksiWajahActivity
 import com.example.capstoneproject.ui.feature.item.pendeteksikulit.PendeteksiKulitActivity
 import com.example.capstoneproject.ui.feature.item.rumahsakit.MapsActivity
 
@@ -45,7 +45,7 @@ class FeatureFragment : Fragment() {
         }
 
         binding.icPendeteksiWajah.setOnClickListener {
-            val intent = Intent(activity, PendeteksiJerawatActivity::class.java)
+            val intent = Intent(activity, PendeteksiWajahActivity::class.java)
             startActivity(intent)
         }
 

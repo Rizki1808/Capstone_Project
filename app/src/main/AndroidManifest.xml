@@ -64,7 +64,7 @@
             android:name=".ui.feature.item.minumobat.MinumObatActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.pendeteksijerawat.HistoryJerawatActivity"
+            android:name=".ui.feature.item.pendeteksiwajah.HistoryWajahActivity"
             android:exported="false" />
         <activity
             android:name=".ui.feature.item.pendeteksikulit.HistoryKulitActivity"
@@ -79,7 +79,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".ui.feature.item.pendeteksijerawat.PendeteksiJerawatActivity"
+            android:name=".ui.feature.item.pendeteksiwajah.PendeteksiWajahActivity"
             android:exported="false" />
         <activity
             android:name=".ui.feature.item.pendeteksikulit.PendeteksiKulitActivity"
