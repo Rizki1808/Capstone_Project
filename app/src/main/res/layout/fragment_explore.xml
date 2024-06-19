@@ -61,16 +61,30 @@
                 app:layout_constraintTop_toBottomOf="@+id/text_medic2"
                 tools:ignore="SmallSp,TextSizeCheck" />
 
+            <TextView
+                android:id="@+id/headline_artikel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibm_plex_sans_medium"
+                android:text="@string/head_berita3"
+                android:textColor="@color/black_500"
+                android:textSize="20sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dtil_news" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
-                android:layout_width="386dp"
-                android:layout_height="588dp"
-                android:layout_marginTop="4dp"
+                android:layout_width="384dp"
+                android:layout_height="612dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.997"
-                app:layout_constraintStart_toEndOf="@+id/dtil_news"
-                app:layout_constraintStart_toStartOf="@+id/dtil_news"
-                app:layout_constraintTop_toBottomOf="@+id/dtil_news" />
+                app:layout_constraintHorizontal_bias="0.941"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headline_artikel"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

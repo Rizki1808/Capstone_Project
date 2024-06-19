@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capstoneproject.databinding.FragmentHomeBinding
 import com.example.capstoneproject.ui.feature.item.diari.DiaryActivity
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
@@ -61,10 +62,11 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.svHome.layoutManager = layoutManager
+
         return root
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

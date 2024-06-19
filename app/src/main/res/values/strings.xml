@@ -149,6 +149,9 @@
     <string name="sistolik">Sistolik</string>
     <string name="contoh_60">Contoh: 60</string>
     <string name="diastolik">Diastolik</string>
+    <string name="head_nws2">"Info Penyakit "</string>
+    <string name="more_news2">Hindari beberapa penyakit ini</string>
+    <string name="head_berita3">Artikel Terbaru</string>
 
 
 </resources>
