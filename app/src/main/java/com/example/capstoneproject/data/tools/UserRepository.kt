@@ -3,8 +3,10 @@ package com.example.capstoneproject.data.tools
 import android.util.Log
 import com.example.capstoneproject.data.api.ApiConfig
 import com.example.capstoneproject.data.api.ApiService
+import com.example.capstoneproject.data.api.ApiServiceNews
 import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
+import com.example.capstoneproject.data.response.NewsResponse
 import com.example.capstoneproject.data.response.PendeteksiResponse
 import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.response.SugarResponse
@@ -14,9 +16,11 @@ import com.example.capstoneproject.data.response.UserModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import okhttp3.MultipartBody
+import retrofit2.Call
 
 class UserRepository private constructor(
     private var apiService: ApiService,
+    private var apiServiceNews: ApiServiceNews,
     private val userPreference: UserPreference
 ) {
 
@@ -72,6 +76,10 @@ class UserRepository private constructor(
         return apiService.postAcneDetection(image)
     }
 
+    suspend fun getTopHeadlines(): NewsResponse {
+        return apiServiceNews.getTopHeadlines()
+    }
+
     suspend fun logout() {
         userPreference.logout()
     }
@@ -80,9 +88,9 @@ class UserRepository private constructor(
         @Volatile
         private var instance: UserRepository? = null
 
-        fun getInstance(userPreference: UserPreference, apiService: ApiService): UserRepository {
+        fun getInstance(userPreference: UserPreference, apiService: ApiService, apiServiceNews: ApiServiceNews): UserRepository {
             return instance ?: synchronized(this) {
-                UserRepository(apiService, userPreference).also { instance = it }
+                UserRepository(apiService, apiServiceNews, userPreference).also { instance = it }
             }
         }
     }
