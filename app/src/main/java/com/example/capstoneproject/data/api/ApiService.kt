@@ -4,6 +4,7 @@ import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
 import com.example.capstoneproject.data.response.KulitResponse
 import com.example.capstoneproject.data.response.PressureResponse
+import com.example.capstoneproject.data.response.SugarResponse
 import com.example.capstoneproject.data.response.UploadPressureResponse
 import com.example.capstoneproject.data.response.UserResponse
 import okhttp3.MultipartBody
@@ -54,6 +55,9 @@ interface ApiService {
         @Field("check_date") checkDate: String,
         @Field("check_time") checkTime: String
     ): UploadPressureResponse
+
+    @GET("sugar-blood")
+    suspend fun getSugarBlood(): SugarResponse
 
     @Multipart
     @POST("skin-detection")

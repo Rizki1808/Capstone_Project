@@ -33,7 +33,7 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/preview_image"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/blood_pressure"
+                app:srcCompat="@drawable/blood_donation"
                 tools:ignore="ImageContrastCheck" />
 
         </androidx.cardview.widget.CardView>
@@ -46,7 +46,7 @@
             android:layout_marginTop="8dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="@string/tekanan_darah"
+            android:text="@string/gula_darah"
             app:layout_constraintStart_toEndOf="@+id/cardViewImage"
             app:layout_constraintTop_toTopOf="@+id/cardViewImage" />
 
@@ -55,46 +55,24 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/tvName">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="@string/sistolik"
-                android:textColor="@color/grey_500" />
-
-            <TextView
-                android:id="@+id/tvSistolik"
+                android:id="@+id/tvGula"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_500"
+                android:layout_marginEnd="4dp"
                 tools:text="60" />
 
-            <View
-                android:layout_width="5dp"
-                android:layout_height="5dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@color/grey_100" />
-
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="@string/diastolik"
-                android:textColor="@color/grey_500" />
-
-            <TextView
-                android:id="@+id/tvDiastolik"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_500"
-                tools:text="60" />
+                android:text="@string/mg_dl" />
+
         </LinearLayout>
 
         <TextView

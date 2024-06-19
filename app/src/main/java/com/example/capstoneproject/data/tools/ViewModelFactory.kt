@@ -3,6 +3,7 @@ package com.example.capstoneproject.data.tools
 import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.data.di.Injection
+import com.example.capstoneproject.ui.feature.item.diari.guladarah.GulaViewModel
 import com.example.capstoneproject.ui.feature.item.diari.tekanandarah.TekananViewModel
 import com.example.capstoneproject.ui.feature.item.diari.tekanandarah.tambahtekanan.TambahTekananViewModel
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitViewModel
@@ -45,6 +46,9 @@ class ViewModelFactory(private val repository: UserRepository) :
             }
             modelClass.isAssignableFrom(KulitViewModel::class.java) -> {
                 KulitViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(GulaViewModel::class.java) -> {
+                GulaViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

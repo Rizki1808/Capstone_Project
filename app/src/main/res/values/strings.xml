@@ -159,6 +159,8 @@
     <string name="hasil_pendeteksi">Hasil Pendeteksi</string>
     <string name="cari_detail_penyakit">Cari Detail Penyakit</string>
     <string name="pendeteksi_penyakit_wajah">Pendeteksi Penyakit Wajah</string>
+    <string name="gula_darah">Gula Darah</string>
+    <string name="mg_dl">mg/dl</string>
 
 
 </resources>

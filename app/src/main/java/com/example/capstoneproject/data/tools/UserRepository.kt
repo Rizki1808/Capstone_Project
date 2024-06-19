@@ -7,6 +7,7 @@ import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
 import com.example.capstoneproject.data.response.KulitResponse
 import com.example.capstoneproject.data.response.PressureResponse
+import com.example.capstoneproject.data.response.SugarResponse
 import com.example.capstoneproject.data.response.UploadPressureResponse
 import com.example.capstoneproject.data.response.UserModel
 import kotlinx.coroutines.flow.Flow
@@ -39,6 +40,13 @@ class UserRepository private constructor(
         Log.d("UserRepository", "Fetching stories with token: ${session.token}")
         val apiServiceWithToken = ApiConfig.getApiService(session.token)
         return apiServiceWithToken.getPressure()
+    }
+
+    suspend fun getSugarBlood(): SugarResponse {
+        val session = userPreference.getSession().first()
+        Log.d("UserRepository", "Fetching stories with token: ${session.token}")
+        val apiServiceWithToken = ApiConfig.getApiService(session.token)
+        return apiServiceWithToken.getSugarBlood()
     }
 
     suspend fun postBloodPressure(sistolik: Int, distolik: Int, checkDate: String, checkTime: String): UploadPressureResponse {
