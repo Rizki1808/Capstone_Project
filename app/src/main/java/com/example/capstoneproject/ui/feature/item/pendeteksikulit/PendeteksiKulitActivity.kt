@@ -1,19 +1,33 @@
 package com.example.capstoneproject.ui.feature.item.pendeteksikulit
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.util.Base64
 import android.util.Log
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.ActivityPendeteksiKulitBinding
 import com.example.capstoneproject.ui.feature.item.getImageUri
 import com.yalantis.ucrop.UCrop
 import java.io.File
+import androidx.lifecycle.Observer
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
+import java.io.ByteArrayOutputStream
+import java.io.InputStream
 
 class PendeteksiKulitActivity : AppCompatActivity() {
 
+    private val viewModel by viewModels<KulitViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
     private lateinit var binding: ActivityPendeteksiKulitBinding
     private var currentImageUri: Uri? = null
 
@@ -33,6 +47,54 @@ class PendeteksiKulitActivity : AppCompatActivity() {
             val intent = Intent(this, HistoryKulitActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnAnalisis.setOnClickListener {
+            currentImageUri?.let { uri ->
+                val requestBody = createRequestBody(uri)
+                viewModel.uploadSkin(requestBody)
+            }
+        }
+
+
+
+        viewModel.uploadSkin.observe(this, Observer { result ->
+            result.onSuccess {
+                // Handle success response
+                Log.d("UploadSkin", "Success: $it")
+            }.onFailure {
+                // Handle error response
+                Log.e("UploadSkin", "Failure: ${it.message}")
+            }
+        })
+    }
+
+    private fun convertImageToBase64(uri: Uri): String {
+        val inputStream: InputStream? = contentResolver.openInputStream(uri)
+        var bitmap = BitmapFactory.decodeStream(inputStream)
+        val outputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 30, outputStream) // Lowering the quality to 30
+        var bytes = outputStream.toByteArray()
+
+        while (bytes.size > 1048576) { // Reduce the image size until it's below the limit
+            val scaleFactor = Math.sqrt((1048576.0 / bytes.size).toDouble())
+            val newWidth = (bitmap.width * scaleFactor).toInt()
+            val newHeight = (bitmap.height * scaleFactor).toInt()
+            bitmap = Bitmap.createScaledBitmap(bitmap, newWidth, newHeight, true)
+
+            outputStream.reset()
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 30, outputStream)
+            bytes = outputStream.toByteArray()
+        }
+
+        val base64Image = Base64.encodeToString(bytes, Base64.DEFAULT)
+        Log.d("Base64Image", "Image size: ${base64Image.length}")
+        return base64Image
+    }
+
+    private fun createRequestBody(uri: Uri): MultipartBody.Part {
+        val file = File(uri.path)
+        val requestBody = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
+        return MultipartBody.Part.createFormData("image", file.name, requestBody)
     }
 
     // Camera

@@ -7,6 +7,7 @@ import com.example.capstoneproject.ui.feature.item.diari.tekanandarah.TekananVie
 import com.example.capstoneproject.ui.feature.item.diari.tekanandarah.tambahtekanan.TambahTekananViewModel
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitViewModel
 import com.example.capstoneproject.ui.feature.item.infopenyakit.detailpenyakit.DetailPenyakitViewModel
+import com.example.capstoneproject.ui.feature.item.pendeteksikulit.KulitViewModel
 import com.example.capstoneproject.ui.login.signin.SignInViewModel
 import com.example.capstoneproject.ui.login.signup.SignUpViewModel
 import com.example.capstoneproject.ui.main.MainViewModel
@@ -41,6 +42,9 @@ class ViewModelFactory(private val repository: UserRepository) :
             }
             modelClass.isAssignableFrom(TambahTekananViewModel::class.java) -> {
                 TambahTekananViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(KulitViewModel::class.java) -> {
+                KulitViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

@@ -5,11 +5,13 @@ import com.example.capstoneproject.data.api.ApiConfig
 import com.example.capstoneproject.data.api.ApiService
 import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
+import com.example.capstoneproject.data.response.KulitResponse
 import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.response.UploadPressureResponse
 import com.example.capstoneproject.data.response.UserModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
+import okhttp3.MultipartBody
 
 class UserRepository private constructor(
     private var apiService: ApiService,
@@ -44,6 +46,10 @@ class UserRepository private constructor(
         Log.d("UserRepository", "Fetching stories with token: ${session.token}")
         val apiServiceWithToken = ApiConfig.getApiService(session.token)
         return apiServiceWithToken.postBloodPressure(sistolik, distolik, checkDate, checkTime)
+    }
+
+    suspend fun postSkinDetection(image: MultipartBody.Part): KulitResponse {
+        return apiService.postSkinDetection(image)
     }
 
     suspend fun logout() {
