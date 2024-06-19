@@ -283,6 +283,7 @@
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/grey_500"
                         android:fontFamily="@font/ibm_plex_sans_reguler"
                         android:text="@string/anda_sudah_punya_akun" />
 
