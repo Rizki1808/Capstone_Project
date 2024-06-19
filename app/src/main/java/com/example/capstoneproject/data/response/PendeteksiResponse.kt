@@ -1,6 +1,6 @@
 package com.example.capstoneproject.data.response
 
-data class KulitResponse(
+data class PendeteksiResponse(
 	val result: String? = null,
 	val error: Boolean? = null
 )

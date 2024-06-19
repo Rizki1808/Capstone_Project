@@ -5,7 +5,7 @@ import com.example.capstoneproject.data.api.ApiConfig
 import com.example.capstoneproject.data.api.ApiService
 import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
-import com.example.capstoneproject.data.response.KulitResponse
+import com.example.capstoneproject.data.response.PendeteksiResponse
 import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.response.SugarResponse
 import com.example.capstoneproject.data.response.UploadPressureResponse
@@ -64,8 +64,12 @@ class UserRepository private constructor(
         return apiServiceWithToken.postSugarBlood(sugar, checkDate, checkTime)
     }
 
-    suspend fun postSkinDetection(image: MultipartBody.Part): KulitResponse {
+    suspend fun postSkinDetection(image: MultipartBody.Part): PendeteksiResponse {
         return apiService.postSkinDetection(image)
+    }
+
+    suspend fun postAcneDetection(image: MultipartBody.Part): PendeteksiResponse {
+        return apiService.postAcneDetection(image)
     }
 
     suspend fun logout() {

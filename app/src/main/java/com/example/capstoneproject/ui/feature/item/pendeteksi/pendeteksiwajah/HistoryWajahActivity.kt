@@ -1,10 +1,10 @@
-package com.example.capstoneproject.ui.feature.item.pendeteksikulit
+package com.example.capstoneproject.ui.feature.item.pendeteksi.pendeteksiwajah
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.capstoneproject.databinding.ActivityHistoryBinding
 
-class HistoryKulitActivity : AppCompatActivity() {
+class HistoryWajahActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHistoryBinding
     override fun onCreate(savedInstanceState: Bundle?) {

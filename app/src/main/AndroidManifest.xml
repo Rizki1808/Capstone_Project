@@ -27,7 +27,7 @@
             android:name=".ui.feature.item.diari.guladarah.tambahgula.TambahGulaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.pendeteksikulit.HasilKulitActivity"
+            android:name=".ui.feature.item.pendeteksi.HasilActivity"
             android:exported="false" />
         <activity
             android:name=".ui.feature.item.infopenyakit.detailpenyakit.DetailPenyakitActivity"
@@ -70,10 +70,10 @@
             android:name=".ui.feature.item.minumobat.MinumObatActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.pendeteksiwajah.HistoryWajahActivity"
+            android:name=".ui.feature.item.pendeteksi.pendeteksiwajah.HistoryWajahActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.pendeteksikulit.HistoryKulitActivity"
+            android:name=".ui.feature.item.pendeteksi.pendeteksikulit.HistoryKulitActivity"
             android:exported="false" />
 
         <meta-data
@@ -85,10 +85,10 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".ui.feature.item.pendeteksiwajah.PendeteksiWajahActivity"
+            android:name=".ui.feature.item.pendeteksi.pendeteksiwajah.PendeteksiWajahActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.pendeteksikulit.PendeteksiKulitActivity"
+            android:name=".ui.feature.item.pendeteksi.pendeteksikulit.PendeteksiKulitActivity"
             android:exported="false" />
         <activity
             android:name=".ui.feature.item.infopenyakit.InfoPenyakitActivity"

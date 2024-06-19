@@ -1,11 +1,10 @@
-package com.example.capstoneproject.ui.feature.item.pendeteksikulit
+package com.example.capstoneproject.ui.feature.item.pendeteksi.pendeteksikulit
 
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
-import android.util.Base64
 import android.util.Log
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -17,6 +16,7 @@ import com.example.capstoneproject.ui.feature.item.getImageUri
 import com.yalantis.ucrop.UCrop
 import java.io.File
 import androidx.lifecycle.Observer
+import com.example.capstoneproject.ui.feature.item.pendeteksi.HasilActivity
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -59,9 +59,9 @@ class PendeteksiKulitActivity : AppCompatActivity() {
             result.onSuccess {
                 // Handle success response
                 Log.d("UploadSkin", "Success: $it")
-                val intent = Intent(this, HasilKulitActivity::class.java).apply {
-                    putExtra("RESULT", it.result)  // Pass the result
-                    putExtra("IMAGE_URI", currentImageUri.toString())  // Pass the image URI as a string
+                val intent = Intent(this, HasilActivity::class.java).apply {
+                    putExtra("RESULT", it.result)
+                    putExtra("IMAGE_URI", currentImageUri.toString())
                 }
                 startActivity(intent)
             }.onFailure {
@@ -70,30 +70,6 @@ class PendeteksiKulitActivity : AppCompatActivity() {
             }
         })
     }
-
-    private fun convertImageToBase64(uri: Uri): String {
-        val inputStream: InputStream? = contentResolver.openInputStream(uri)
-        var bitmap = BitmapFactory.decodeStream(inputStream)
-        val outputStream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 30, outputStream) // Lowering the quality to 30
-        var bytes = outputStream.toByteArray()
-
-        while (bytes.size > 1048576) { // Reduce the image size until it's below the limit
-            val scaleFactor = Math.sqrt((1048576.0 / bytes.size).toDouble())
-            val newWidth = (bitmap.width * scaleFactor).toInt()
-            val newHeight = (bitmap.height * scaleFactor).toInt()
-            bitmap = Bitmap.createScaledBitmap(bitmap, newWidth, newHeight, true)
-
-            outputStream.reset()
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 30, outputStream)
-            bytes = outputStream.toByteArray()
-        }
-
-        val base64Image = Base64.encodeToString(bytes, Base64.DEFAULT)
-        Log.d("Base64Image", "Image size: ${base64Image.length}")
-        return base64Image
-    }
-
 
     private fun createRequestBody(uri: Uri): MultipartBody.Part {
         val inputStream: InputStream? = contentResolver.openInputStream(uri)

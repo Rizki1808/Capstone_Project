@@ -11,8 +11,8 @@ import com.example.capstoneproject.databinding.FragmentFeatureBinding
 import com.example.capstoneproject.ui.feature.item.diari.DiaryActivity
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
 import com.example.capstoneproject.ui.feature.item.minumobat.MinumObatActivity
-import com.example.capstoneproject.ui.feature.item.pendeteksiwajah.PendeteksiWajahActivity
-import com.example.capstoneproject.ui.feature.item.pendeteksikulit.PendeteksiKulitActivity
+import com.example.capstoneproject.ui.feature.item.pendeteksi.pendeteksiwajah.PendeteksiWajahActivity
+import com.example.capstoneproject.ui.feature.item.pendeteksi.pendeteksikulit.PendeteksiKulitActivity
 import com.example.capstoneproject.ui.feature.item.rumahsakit.MapsActivity
 
 class FeatureFragment : Fragment() {

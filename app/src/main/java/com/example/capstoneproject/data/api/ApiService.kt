@@ -2,7 +2,7 @@ package com.example.capstoneproject.data.api
 
 import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
-import com.example.capstoneproject.data.response.KulitResponse
+import com.example.capstoneproject.data.response.PendeteksiResponse
 import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.response.SugarResponse
 import com.example.capstoneproject.data.response.UploadPressureResponse
@@ -72,5 +72,11 @@ interface ApiService {
     @POST("skin-detection")
     suspend fun postSkinDetection(
         @Part image: MultipartBody.Part
-    ): KulitResponse
+    ): PendeteksiResponse
+
+    @Multipart
+    @POST("acne-detection")
+    suspend fun postAcneDetection(
+        @Part image: MultipartBody.Part
+    ): PendeteksiResponse
 }

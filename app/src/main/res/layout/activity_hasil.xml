@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.feature.item.pendeteksikulit.HasilKulitActivity">
+    tools:context=".ui.feature.item.pendeteksi.HasilActivity">
 
     <View
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ibm_plex_sans_semibold"
-                android:text="@string/pendeteksi_penyakit_kulit"
+                android:text="@string/hasil_pendeteksi"
                 android:textColor="@color/blue_500"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline2"

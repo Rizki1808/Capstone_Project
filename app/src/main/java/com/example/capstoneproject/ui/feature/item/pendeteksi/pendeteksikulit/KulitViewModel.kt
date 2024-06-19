@@ -1,19 +1,19 @@
-package com.example.capstoneproject.ui.feature.item.pendeteksikulit
+package com.example.capstoneproject.ui.feature.item.pendeteksi.pendeteksikulit
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.capstoneproject.data.response.KulitResponse
+import com.example.capstoneproject.data.response.PendeteksiResponse
 import com.example.capstoneproject.data.tools.UserRepository
 import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
 
-class KulitViewModel(private val repository: UserRepository) : ViewModel()  {
+class KulitViewModel(private val repository: UserRepository) : ViewModel() {
 
-    private val _uploadSkin = MutableLiveData<Result<KulitResponse>>()
-    val uploadSkin: LiveData<Result<KulitResponse>> = _uploadSkin
+    private val _uploadSkin = MutableLiveData<Result<PendeteksiResponse>>()
+    val uploadSkin: LiveData<Result<PendeteksiResponse>> = _uploadSkin
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> get() = _isLoading

@@ -1,19 +1,19 @@
-package com.example.capstoneproject.ui.feature.item.pendeteksikulit
+package com.example.capstoneproject.ui.feature.item.pendeteksi
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.capstoneproject.databinding.ActivityHasilKulitBinding
+import com.example.capstoneproject.databinding.ActivityHasilBinding
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
 
-class HasilKulitActivity : AppCompatActivity() {
+class HasilActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHasilKulitBinding
+    private lateinit var binding: ActivityHasilBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHasilKulitBinding.inflate(layoutInflater)
+        binding = ActivityHasilBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Receive data from Intent
