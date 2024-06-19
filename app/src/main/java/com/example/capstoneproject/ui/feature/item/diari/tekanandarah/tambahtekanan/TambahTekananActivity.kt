@@ -1,5 +1,7 @@
 package com.example.capstoneproject.ui.feature.item.diari.tekanandarah.tambahtekanan
 
+import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +13,8 @@ import com.example.capstoneproject.databinding.ActivityTambahTekananBinding
 import androidx.appcompat.app.AlertDialog
 import com.example.capstoneproject.ui.feature.item.diari.tekanandarah.TekananActivity
 import androidx.lifecycle.Observer
+import com.example.capstoneproject.ui.tools.DatePickerFragment
+import java.util.Calendar
 
 class TambahTekananActivity : AppCompatActivity() {
 
@@ -40,6 +44,42 @@ class TambahTekananActivity : AppCompatActivity() {
                 showErrorDialog(it.message)
             }
         })
+
+        binding.edTgl.setOnClickListener {
+            showDatePickerDialog()
+        }
+
+        binding.edWaktu.setOnClickListener {
+            showTimePickerDialog()
+        }
+    }
+
+    private fun showDatePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        val datePickerDialog = DatePickerDialog(this, { _, selectedYear, selectedMonth, selectedDay ->
+            val formattedDate = String.format("%04d-%02d-%02d", selectedYear, selectedMonth + 1, selectedDay)
+            binding.edTgl.setText(formattedDate)
+        }, year, month, day)
+
+        datePickerDialog.show()
+    }
+
+    private fun showTimePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+        val minute = calendar.get(Calendar.MINUTE)
+        val second = 0
+
+        val timePickerDialog = TimePickerDialog(this, { _, selectedHour, selectedMinute ->
+            val formattedTime = String.format("%02d:%02d:%02d", selectedHour, selectedMinute, second)
+            binding.edWaktu.setText(formattedTime)
+        }, hour, minute, true)
+
+        timePickerDialog.show()
     }
 
     private fun setupAction() {
@@ -54,6 +94,7 @@ class TambahTekananActivity : AppCompatActivity() {
                 .setMessage("Please fill all the fields")
                 .setPositiveButton("OK") { dialog, _ ->
                     dialog.dismiss()
+
                 }
                 .show()
         } else {
@@ -67,8 +108,7 @@ class TambahTekananActivity : AppCompatActivity() {
             .setMessage("Data Berhasil Disimpan")
             .setPositiveButton("OK") { dialog, _ ->
                 dialog.dismiss()
-                val intent = Intent(this, TekananActivity::class.java)
-                startActivity(intent)
+                finish()
             }
             .show()
     }

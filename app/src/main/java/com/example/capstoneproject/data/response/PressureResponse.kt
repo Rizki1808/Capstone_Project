@@ -3,12 +3,12 @@ package com.example.capstoneproject.data.response
 import com.google.gson.annotations.SerializedName
 
 data class PressureResponse(
-    @SerializedName("data")
-    val data: ArrayList<DataBlood>,
-    @SerializedName("error")
-    val error: Boolean? = null,
-    @SerializedName("status")
-    val status: String? = null
+	@SerializedName("data")
+	val data: List<DataBlood>,
+	@SerializedName("error")
+	val error: Boolean? = null,
+	@SerializedName("status")
+	val status: String? = null
 )
 
 data class DataBlood(

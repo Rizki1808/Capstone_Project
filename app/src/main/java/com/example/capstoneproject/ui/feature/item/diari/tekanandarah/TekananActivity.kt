@@ -31,15 +31,21 @@ class TekananActivity : AppCompatActivity() {
             rvPressure.layoutManager = LinearLayoutManager(this@TekananActivity)
             rvPressure.setHasFixedSize(true)
             rvPressure.adapter = adapter
+
+            swipeRefreshLayout.setOnRefreshListener {
+                refreshData()
+            }
         }
 
         viewModel.pressure.observe(this, Observer { result ->
             result.onSuccess { pressureResponse ->
                 ArrayList(pressureResponse.data).let { adapter.setData(it) }
                 showLoading(false)
+                binding.swipeRefreshLayout.isRefreshing = false
             }
             result.onFailure { exception ->
                 showLoading(false)
+                binding.swipeRefreshLayout.isRefreshing = false
                 // Handle error
             }
         })
@@ -54,6 +60,10 @@ class TekananActivity : AppCompatActivity() {
             val intent = Intent(this, TambahTekananActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun refreshData() {
+        viewModel.getPressure()
     }
 
     private fun showLoading(isLoading: Boolean) {

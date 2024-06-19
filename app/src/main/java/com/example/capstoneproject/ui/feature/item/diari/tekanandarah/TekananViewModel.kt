@@ -7,6 +7,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.tools.UserRepository
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class TekananViewModel(private val userRepository: UserRepository) : ViewModel() {
 
@@ -21,7 +23,10 @@ class TekananViewModel(private val userRepository: UserRepository) : ViewModel()
         viewModelScope.launch {
             try {
                 val result = userRepository.getPressure()
-                _pressure.value = Result.success(result)
+                val sortedData = result.data.sortedWith(compareByDescending {
+                    SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).parse("${it.checkDate} ${it.checkTime}")
+                })
+                _pressure.value = Result.success(PressureResponse(sortedData))
             } catch (e: Exception) {
                 _pressure.value = Result.failure(e)
             } finally {
