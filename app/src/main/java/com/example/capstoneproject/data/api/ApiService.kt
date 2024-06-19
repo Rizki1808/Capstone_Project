@@ -6,6 +6,7 @@ import com.example.capstoneproject.data.response.KulitResponse
 import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.response.SugarResponse
 import com.example.capstoneproject.data.response.UploadPressureResponse
+import com.example.capstoneproject.data.response.UploadSugarResponse
 import com.example.capstoneproject.data.response.UserResponse
 import okhttp3.MultipartBody
 import retrofit2.Call
@@ -58,6 +59,14 @@ interface ApiService {
 
     @GET("sugar-blood")
     suspend fun getSugarBlood(): SugarResponse
+
+    @FormUrlEncoded
+    @POST("sugar-blood")
+    suspend fun postSugarBlood(
+        @Field("blood_sugar") gula: Int,
+        @Field("check_date") checkDate: String,
+        @Field("check_time") checkTime: String
+    ): UploadSugarResponse
 
     @Multipart
     @POST("skin-detection")

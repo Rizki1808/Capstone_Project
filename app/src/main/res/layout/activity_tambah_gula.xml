@@ -5,6 +5,230 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.feature.item.diari.guladarah.tambahgula.TambahGulaActivity">
+    tools:context=".ui.feature.item.diari.tekanandarah.tambahtekanan.TambahTekananActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/blue_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/background_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibm_plex_sans_semibold"
+                android:text="@string/tambah_gula_darah"
+                android:textColor="@color/blue_500"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/grey_100"
+                app:layout_constraintBottom_toBottomOf="@id/guideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline2" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_marginTop="32dp"
+                        android:contentDescription="@string/tambah_gula_darah"
+                        android:src="@drawable/blood_donation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ImageContrastCheck" />
+
+                    <!-- Tanggal Periksa TextView -->
+                    <TextView
+                        android:id="@+id/tglTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/tanggal_periksa"
+                        android:textColor="@color/black_700"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                    <!-- Tanggal Periksa TextInputLayout -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tglEditTextLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="32dp"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tglTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/tglTextView">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_tgl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_border"
+                            android:ems="10"
+                            android:hint="@string/pilih_tanggal"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:drawableEnd="@drawable/ic_date_range_24"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Waktu Periksa TextView -->
+                    <TextView
+                        android:id="@+id/waktuPeriksaTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/waktu_periksa"
+                        android:textColor="@color/black_700"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tglEditTextLayout" />
+
+                    <!-- Waktu Periksa TextInputLayout -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/waktuPeriksaEditTextLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="32dp"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/waktuPeriksaTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/waktuPeriksaTextView">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_waktu"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_border"
+                            android:ems="10"
+                            android:hint="@string/pilih_waktu"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:drawableEnd="@drawable/ic_time_24"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Gula Darah TextView -->
+                    <TextView
+                        android:id="@+id/sugarTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/gula_darah"
+                        android:textColor="@color/black_700"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/waktuPeriksaEditTextLayout" />
+
+                    <!-- Gula Darah TextInputLayout -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/sugarEditTextLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="32dp"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/sugarTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/sugarTextView">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_sugar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_border"
+                            android:ems="10"
+                            android:hint="@string/contoh_60"
+                            android:inputType="number"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_simpan"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/rounded_border"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/simpan"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="@+id/sugarEditTextLayout"
+                        app:layout_constraintStart_toStartOf="@+id/sugarEditTextLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/sugarEditTextLayout" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

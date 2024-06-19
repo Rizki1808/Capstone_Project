@@ -141,7 +141,6 @@
     <string name="description_pressure">Rutin memantau tekanan darah untuk menjaga kesehatan jantung Anda</string>
     <string name="pencatatan_gula_darah">Pencatatan Gula Darah</string>
     <string name="description_sugar">Rutin mengukur gula darah untuk hidup yang lebih sehat</string>
-    <string name="tambah_catatan_darah">Tambah Catatan Darah</string>
     <string name="tanggal_periksa">Tanggal Periksa</string>
     <string name="pilih_tanggal">Pilih Tanggal</string>
     <string name="pilih_waktu">Pilih Waktu</string>
@@ -161,6 +160,8 @@
     <string name="pendeteksi_penyakit_wajah">Pendeteksi Penyakit Wajah</string>
     <string name="gula_darah">Gula Darah</string>
     <string name="mg_dl">mg/dl</string>
+    <string name="tambah_tekanan_darah">Tambah Tekanan Darah</string>
+    <string name="tambah_gula_darah">Tambah Gula Darah</string>
 
 
 </resources>

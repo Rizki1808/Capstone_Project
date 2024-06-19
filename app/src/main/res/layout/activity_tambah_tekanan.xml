@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ibm_plex_sans_semibold"
-                android:text="@string/tambah_catatan_darah"
+                android:text="@string/tambah_tekanan_darah"
                 android:textColor="@color/blue_500"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline2"
