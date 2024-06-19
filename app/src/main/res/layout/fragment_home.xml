@@ -92,8 +92,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:contentDescription="@string/pendeteksi_penyakit_kulit"
-                            android:src="@drawable/ic_face_head_bandage_24dp"
-                            app:tint="@color/coklat_200"
+                            android:src="@drawable/rash"
                             tools:ignore="ImageContrastCheck" />
 
                         <TextView
@@ -108,7 +107,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/ic_pendeteksiJerawat"
+                        android:id="@+id/ic_pendeteksiWajah"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -120,7 +119,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:contentDescription="@string/pendeteksi_jerawat"
-                            android:src="@drawable/ic_jerawat_24dp"
+                            android:src="@drawable/ic_face_head_bandage_24dp"
                             app:tint="@color/pink_500"
                             tools:ignore="ImageContrastCheck" />
 
@@ -129,7 +128,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:paddingHorizontal="6dp"
-                            android:text="@string/pendeteksi_jerawat"
+                            android:text="@string/pendeteksi_penyakit_wajah"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="11sp" />
@@ -361,7 +360,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.32" />
+                app:layout_constraintGuide_percent="0.34" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline3"

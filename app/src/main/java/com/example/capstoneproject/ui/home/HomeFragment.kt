@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.databinding.FragmentHomeBinding
+import com.example.capstoneproject.ui.feature.FeatureFragment
 import com.example.capstoneproject.ui.feature.item.diari.DiaryActivity
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
 import com.example.capstoneproject.ui.feature.item.minumobat.MinumObatActivity
@@ -41,7 +42,7 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        binding.icPendeteksiJerawat.setOnClickListener {
+        binding.icPendeteksiWajah.setOnClickListener {
             val intent = Intent(activity, PendeteksiJerawatActivity::class.java)
             startActivity(intent)
         }
@@ -58,6 +59,11 @@ class HomeFragment : Fragment() {
 
         binding.icDiariKesehatan.setOnClickListener {
             val intent = Intent(activity, DiaryActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.icFiturLain.setOnClickListener {
+            val intent = Intent(activity, FeatureFragment::class.java)
             startActivity(intent)
         }
 
