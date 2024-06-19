@@ -55,12 +55,15 @@ class PendeteksiKulitActivity : AppCompatActivity() {
             }
         }
 
-
-
         viewModel.uploadSkin.observe(this, Observer { result ->
             result.onSuccess {
                 // Handle success response
                 Log.d("UploadSkin", "Success: $it")
+                val intent = Intent(this, HasilKulitActivity::class.java).apply {
+                    putExtra("RESULT", it.result)  // Pass the result
+                    putExtra("IMAGE_URI", currentImageUri.toString())  // Pass the image URI as a string
+                }
+                startActivity(intent)
             }.onFailure {
                 // Handle error response
                 Log.e("UploadSkin", "Failure: ${it.message}")

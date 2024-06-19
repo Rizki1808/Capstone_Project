@@ -156,6 +156,8 @@
     <string name="terakhir_diperbarui">Terakhir Diperbarui:</string>
     <string name="tekanan_darah">Tekanan Darah</string>
     <string name="tanggal">10/02/2024</string>
+    <string name="hasil_pendeteksi">Hasil Pendeteksi</string>
+    <string name="cari_detail_penyakit">Cari Detail Penyakit</string>
 
 
 </resources>
