@@ -1,9 +1,11 @@
 package com.example.capstoneproject.ui.feature.item.pendeteksikulit
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.capstoneproject.databinding.ActivityHasilKulitBinding
+import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
 
 class HasilKulitActivity : AppCompatActivity() {
 
@@ -22,5 +24,10 @@ class HasilKulitActivity : AppCompatActivity() {
         // Update UI
         binding.tvHasil.text = result
         binding.ivPreviewImageHasilKulit.setImageURI(imageUri)
+
+        binding.btnFind.setOnClickListener{
+            val intent = Intent(this, InfoPenyakitActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

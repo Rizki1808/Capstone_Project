@@ -94,11 +94,31 @@ class PendeteksiKulitActivity : AppCompatActivity() {
         return base64Image
     }
 
+
     private fun createRequestBody(uri: Uri): MultipartBody.Part {
-        val file = File(uri.path)
+        val inputStream: InputStream? = contentResolver.openInputStream(uri)
+        var bitmap = BitmapFactory.decodeStream(inputStream)
+        val outputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 30, outputStream) // Compress the image to reduce size
+        var bytes = outputStream.toByteArray()
+
+        while (bytes.size > 1048576) { // Reduce the image size until it's below the limit
+            val scaleFactor = Math.sqrt((1048576.0 / bytes.size).toDouble())
+            val newWidth = (bitmap.width * scaleFactor).toInt()
+            val newHeight = (bitmap.height * scaleFactor).toInt()
+            bitmap = Bitmap.createScaledBitmap(bitmap, newWidth, newHeight, true)
+
+            outputStream.reset()
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 30, outputStream)
+            bytes = outputStream.toByteArray()
+        }
+
+        val file = File(cacheDir, "temp_image.jpg")
+        file.writeBytes(bytes)
         val requestBody = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
         return MultipartBody.Part.createFormData("image", file.name, requestBody)
     }
+
 
     // Camera
     private fun startCamera() {
