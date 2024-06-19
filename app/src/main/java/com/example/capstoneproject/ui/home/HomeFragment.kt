@@ -13,7 +13,6 @@ import com.example.capstoneproject.data.response.Article
 import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.FragmentHomeBinding
 import com.example.capstoneproject.ui.explore.DetailExploreActivity
-import com.example.capstoneproject.ui.explore.ExploreAdapter
 import com.example.capstoneproject.ui.explore.ExploreViewModel
 import com.example.capstoneproject.ui.feature.FeatureFragment
 import com.example.capstoneproject.ui.feature.item.diari.DiaryActivity
@@ -28,7 +27,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private lateinit var exploreViewModel: ExploreViewModel
-    private lateinit var horizontalAdapter: ExploreAdapter
+    private lateinit var horizontalAdapter: HomeExploreAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,10 +42,10 @@ class HomeFragment : Fragment() {
         exploreViewModel = ViewModelProvider(this, factory).get(ExploreViewModel::class.java)
 
         // Set up horizontal RecyclerView
-        horizontalAdapter = ExploreAdapter()
+        horizontalAdapter = HomeExploreAdapter()
         horizontalAdapter.notifyDataSetChanged()
 
-        horizontalAdapter.setOnItemClickCallback(object : ExploreAdapter.OnItemClickCallback {
+        horizontalAdapter.setOnItemClickCallback(object : HomeExploreAdapter.OnItemClickCallback {
             override fun onItemClickCallBack(data: Article) {
                 val intent = Intent(context, DetailExploreActivity::class.java)
                 intent.putExtra(DetailExploreActivity.EXTRA_URL, data.url)
