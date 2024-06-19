@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -47,10 +48,27 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-    }
-
-    private fun navigateToSignIn() {
-        startActivity(Intent(this, SignInActivity::class.java))
-        finish()
+        // Handle bottom navigation item clicks
+        navView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    navController.navigate(R.id.navigation_home, null, NavOptions.Builder().setPopUpTo(R.id.navigation_home, true).build())
+                    true
+                }
+                R.id.navigation_feature -> {
+                    navController.navigate(R.id.navigation_feature, null, NavOptions.Builder().setPopUpTo(R.id.navigation_feature, true).build())
+                    true
+                }
+                R.id.navigation_explore -> {
+                    navController.navigate(R.id.navigation_explore, null, NavOptions.Builder().setPopUpTo(R.id.navigation_explore, true).build())
+                    true
+                }
+                R.id.navigation_profile -> {
+                    navController.navigate(R.id.navigation_profile, null, NavOptions.Builder().setPopUpTo(R.id.navigation_profile, true).build())
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }
