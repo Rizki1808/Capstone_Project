@@ -56,9 +56,11 @@ class ExploreFragment : Fragment() {
             result.onSuccess { newsResponse ->
                 ArrayList(newsResponse.articles).let { adapter.setData(it) }
                 showLoading(false)
+                binding.swipeRefreshLayout.isRefreshing = false
             }
             result.onFailure { exception ->
                 showLoading(false)
+                binding.swipeRefreshLayout.isRefreshing = false
                 // Handle error
             }
         })

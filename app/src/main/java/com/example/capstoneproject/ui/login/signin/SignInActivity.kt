@@ -30,7 +30,6 @@ class SignInActivity : AppCompatActivity() {
         binding.signUpTextView.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.loginButton.setOnClickListener {
@@ -59,7 +58,7 @@ class SignInActivity : AppCompatActivity() {
         if (email.isEmpty() || password.isEmpty()) {
             AlertDialog.Builder(this)
                 .setTitle("Error")
-                .setMessage("Please fill all the fields")
+                .setMessage("Silakan isi semua kolom")
                 .setPositiveButton("OK") { dialog, _ ->
                     dialog.dismiss()
                 }

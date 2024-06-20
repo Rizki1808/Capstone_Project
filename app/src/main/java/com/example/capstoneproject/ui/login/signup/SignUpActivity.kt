@@ -91,7 +91,7 @@ class SignUpActivity : AppCompatActivity() {
         if (email.isEmpty() || password.isEmpty()) {
             AlertDialog.Builder(this)
                 .setTitle("Error")
-                .setMessage("Please fill all the fields")
+                .setMessage("Silakan isi semua kolom")
                 .setPositiveButton("OK") { dialog, _ ->
                     dialog.dismiss()
                 }
