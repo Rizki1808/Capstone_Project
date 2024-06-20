@@ -45,11 +45,6 @@ class DetailAksesibilitas : AppCompatActivity() {
                 disableNotifications()
             }
         }
-
-        // Back button functionality
-        binding.backUp.setOnClickListener {
-            onBackPressed()
-        }
     }
 
     // Enable notifications

@@ -1,7 +1,6 @@
 package com.example.capstoneproject.ui.profile.detail
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -35,11 +34,6 @@ class DetailTentang : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-
-        val button: Button = findViewById(R.id.back_up)
-        button.setOnClickListener {
-            finish()
         }
 
         // Initialize views
