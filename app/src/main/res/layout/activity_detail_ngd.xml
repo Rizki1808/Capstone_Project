@@ -31,72 +31,96 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:fontFamily="@font/ibm_plex_sans_semibold"
                 android:text="@string/tv_detail_ngd"
                 android:textColor="@color/blue_500"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/content_ngd"
+                app:layout_constraintBottom_toTopOf="@+id/guideline2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- Content Section -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/grey_100"
+                app:layout_constraintBottom_toBottomOf="@id/guideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline2" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/content_ngd"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="5dp"
-                android:padding="@dimen/activity_horizontal_margin"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                app:layout_constraintVertical_bias="1.0">
+                app:layout_constraintTop_toBottomOf="@+id/line">
 
-                <!-- KGD Section -->
-                <ImageView
-                    android:id="@+id/img_kgd"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="16dp"
-                    android:contentDescription="@string/img_kgd"
-                    android:src="@drawable/ic_kgd"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/txt_kgd"
-                    android:layout_width="wrap_content"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_kgd"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:fontFamily="@font/ibm_plex_sans_medium"
-                    android:text="@string/head_kgd"
-                    android:textColor="@color/grey_text_btn"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@id/img_kgd"
-                    app:layout_constraintTop_toTopOf="@id/img_kgd" />
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/txt_detail_kgd"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/ibm_plex_sans"
-                    android:text="@string/detail_kgd"
-                    android:textColor="#757575"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="@+id/txt_kgd"
-                    app:layout_constraintStart_toStartOf="@+id/txt_kgd"
-                    app:layout_constraintTop_toBottomOf="@id/txt_kgd"
-                    tools:ignore="TextSizeCheck" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_kgd"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:contentDescription="@string/img_kgd"
+                            android:src="@drawable/ic_kgd"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_kgd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:fontFamily="@font/ibm_plex_sans_medium"
+                            android:text="@string/head_kgd"
+                            android:textColor="@color/grey_text_btn"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@id/img_kgd"
+                            app:layout_constraintTop_toTopOf="@id/img_kgd" />
+
+                        <TextView
+                            android:id="@+id/txt_detail_kgd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/ibm_plex_sans"
+                            android:text="@string/detail_kgd"
+                            android:textColor="#757575"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txt_kgd"
+                            app:layout_constraintStart_toStartOf="@+id/txt_kgd"
+                            app:layout_constraintTop_toBottomOf="@id/txt_kgd"
+                            tools:ignore="TextSizeCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
                 <ImageView
                     android:id="@+id/img_divider1"
@@ -107,44 +131,64 @@
                     android:src="@drawable/divider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txt_detail_kgd" />
+                    app:layout_constraintTop_toBottomOf="@id/cv_kgd" />
 
-                <!-- Pill Section -->
-                <ImageView
-                    android:id="@+id/img_pill"
-                    android:layout_width="56dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_sik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
-                    android:contentDescription="@string/img_pill"
-                    android:src="@drawable/ic_pill"
+                    android:layout_marginEnd="24dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/img_divider1" />
+                    app:layout_constraintTop_toBottomOf="@id/img_divider1">
 
-                <TextView
-                    android:id="@+id/txt_pill"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/ibm_plex_sans_medium"
-                    android:text="@string/head_pil"
-                    android:textColor="@color/grey_text_btn"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@id/img_pill"
-                    app:layout_constraintTop_toTopOf="@id/img_pill" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/txt_detail_pil"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/ibm_plex_sans"
-                    android:text="@string/detail_sentera"
-                    android:textColor="#757575"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="@+id/txt_pill"
-                    app:layout_constraintStart_toStartOf="@+id/txt_pill"
-                    app:layout_constraintTop_toBottomOf="@id/txt_pill" />
+                        <!-- Pill Section -->
+                        <ImageView
+                            android:id="@+id/img_pill"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:contentDescription="@string/img_pill"
+                            android:src="@drawable/ic_pill"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_pill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:fontFamily="@font/ibm_plex_sans_medium"
+                            android:text="@string/head_pil"
+                            android:textColor="@color/grey_text_btn"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/img_pill"
+                            app:layout_constraintTop_toTopOf="@id/img_pill" />
+
+                        <TextView
+                            android:id="@+id/txt_detail_pil"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/ibm_plex_sans"
+                            android:text="@string/detail_sentera"
+                            android:textColor="#757575"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txt_pill"
+                            app:layout_constraintStart_toStartOf="@+id/txt_pill"
+                            app:layout_constraintTop_toBottomOf="@id/txt_pill" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
                 <ImageView
                     android:id="@+id/img_divider2"
@@ -155,44 +199,62 @@
                     android:src="@drawable/divider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txt_detail_pil" />
+                    app:layout_constraintTop_toBottomOf="@id/cv_sik" />
 
-                <!-- PMI Section -->
-                <ImageView
-                    android:id="@+id/img_pmi"
-                    android:layout_width="58dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
-                    android:contentDescription="@string/img_pmi"
-                    android:src="@drawable/ic_pmi"
+                    android:layout_marginEnd="24dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/img_divider2" />
+                    app:layout_constraintTop_toBottomOf="@id/img_divider2">
 
-                <TextView
-                    android:id="@+id/txt_pmi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/ibm_plex_sans_medium"
-                    android:text="@string/head_pmi"
-                    android:textColor="@color/grey_text_btn"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@id/img_pmi"
-                    app:layout_constraintTop_toTopOf="@id/img_pmi" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/txt_detail_pmi"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/ibm_plex_sans"
-                    android:text="@string/detail_pmi"
-                    android:textColor="#757575"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="@+id/txt_pmi"
-                    app:layout_constraintStart_toStartOf="@+id/txt_pmi"
-                    app:layout_constraintTop_toBottomOf="@id/txt_pmi" />
+                        <ImageView
+                            android:id="@+id/img_pmi"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:contentDescription="@string/img_pmi"
+                            android:src="@drawable/ic_pmi"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_pmi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:fontFamily="@font/ibm_plex_sans_medium"
+                            android:text="@string/head_pmi"
+                            android:textColor="@color/grey_text_btn"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/img_pmi"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_detail_pmi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/ibm_plex_sans"
+                            android:text="@string/detail_pmi"
+                            android:textColor="#757575"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txt_pmi"
+                            app:layout_constraintStart_toStartOf="@+id/txt_pmi"
+                            app:layout_constraintTop_toBottomOf="@id/txt_pmi" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
                 <ImageView
                     android:id="@+id/img_divider3"
@@ -203,48 +265,66 @@
                     android:src="@drawable/divider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txt_detail_pmi" />
+                    app:layout_constraintTop_toBottomOf="@id/cv_pmi" />
 
-                <!-- CS Section -->
-                <ImageView
-                    android:id="@+id/img_cs"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="3dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_pbk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
-                    android:contentDescription="@string/img_cs"
-                    android:src="@drawable/img_callcenter"
+                    android:layout_marginEnd="24dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/img_divider3"
-                    tools:ignore="ImageContrastCheck" />
+                    app:layout_constraintTop_toBottomOf="@id/img_divider3">
 
-                <TextView
-                    android:id="@+id/txt_cs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/ibm_plex_sans_medium"
-                    android:text="@string/head_cs"
-                    android:textColor="@color/grey_text_btn"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@id/img_cs"
-                    app:layout_constraintTop_toTopOf="@id/img_cs" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/txt_detail_cs"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/ibm_plex_sans"
-                    android:text="@string/detail_cs"
-                    android:textColor="#757575"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="@+id/txt_cs"
-                    app:layout_constraintStart_toStartOf="@+id/txt_cs"
-                    app:layout_constraintTop_toBottomOf="@id/txt_cs" />
+                        <!-- CS Section -->
+                        <ImageView
+                            android:id="@+id/img_cs"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:contentDescription="@string/img_cs"
+                            android:src="@drawable/img_callcenter"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/txt_cs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:fontFamily="@font/ibm_plex_sans_medium"
+                            android:text="@string/head_cs"
+                            android:textColor="@color/grey_text_btn"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/img_cs"
+                            app:layout_constraintTop_toTopOf="@id/img_cs" />
+
+                        <TextView
+                            android:id="@+id/txt_detail_cs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/ibm_plex_sans"
+                            android:text="@string/detail_cs"
+                            android:textColor="#757575"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txt_cs"
+                            app:layout_constraintStart_toStartOf="@+id/txt_cs"
+                            app:layout_constraintTop_toBottomOf="@id/txt_cs" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

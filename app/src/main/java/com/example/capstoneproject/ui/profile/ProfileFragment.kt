@@ -10,7 +10,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.FragmentProfileBinding
-import com.example.capstoneproject.ui.profile.detail.DetailAksesibilitas
 import com.example.capstoneproject.ui.profile.detail.DetailNGD
 import com.example.capstoneproject.ui.profile.detail.DetailTentang
 
@@ -51,11 +50,6 @@ class ProfileFragment : Fragment() {
 
         binding.btnAmbulance.setOnClickListener {
             val intent = Intent(this@ProfileFragment.requireContext(), DetailNGD::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnAksi.setOnClickListener{
-            val intent = Intent(this@ProfileFragment.requireContext(), DetailAksesibilitas::class.java)
             startActivity(intent)
         }
 

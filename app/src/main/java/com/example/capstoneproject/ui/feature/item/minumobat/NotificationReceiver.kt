@@ -21,8 +21,8 @@ class NotificationReceiver : BroadcastReceiver() {
 
         val notification = NotificationCompat.Builder(context, channelId)
             .setSmallIcon(R.drawable.medicine)
-            .setContentTitle("Time to take your medication")
-            .setContentText("It's time to take $drugName")
+            .setContentTitle("Saatnya minum obat Anda")
+            .setContentText("Saatnya minum $drugName")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setAutoCancel(true)
             .build()

@@ -157,29 +157,6 @@
                     tools:ignore="RtlHardcoded,TextContrastCheck" />
 
                 <Button
-                    android:id="@+id/btn_aksi"
-                    android:layout_width="340dp"
-                    android:layout_height="54dp"
-                    android:background="@drawable/rounded_button"
-                    android:drawableLeft="@drawable/ic_aksesibilitas"
-                    android:drawableRight="@drawable/ic_next"
-                    android:fontFamily="@font/ibm_plex_sans_medium"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:text="@string/aksesibilitas_btn"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/btn_ambulance"
-                    app:layout_constraintHorizontal_bias="0.571"
-                    app:layout_constraintStart_toStartOf="@+id/btn_ambulance"
-                    app:layout_constraintTop_toBottomOf="@id/btn_ambulance"
-                    app:layout_constraintVertical_bias="0.062"
-                    tools:ignore="RtlHardcoded,TextContrastCheck" />
-
-                <Button
                     android:id="@+id/btn_info"
                     android:layout_width="340dp"
                     android:layout_height="54dp"
@@ -196,9 +173,9 @@
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/btn_aksi"
-                    app:layout_constraintStart_toStartOf="@+id/btn_aksi"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_aksi"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_ambulance"
+                    app:layout_constraintStart_toStartOf="@+id/btn_ambulance"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_ambulance"
                     app:layout_constraintVertical_bias="0.076"
                     tools:ignore="RtlHardcoded,TextContrastCheck" />
 

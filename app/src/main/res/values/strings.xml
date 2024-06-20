@@ -123,7 +123,7 @@
     <string name="dtil_news">Kumpulan tips kesehatan, informasi penyakit dan kesehatan yang\nlengkap dan terpercaya</string>
     <string name="headline_snk">Syarat dan Kententuan</string>
     <string name="btn_snk">btn_snk</string>
-    <string name="detial_snk">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
+    <string name="detial_snk">Dengan menggunakan aplikasi SelfMedic, Anda setuju untuk mematuhi syarat dan ketentuan berikut: Aplikasi ini dirancang untuk membantu mengelola kesehatan pribadi, tetapi tidak menggantikan nasihat medis profesional. Anda bertanggung jawab atas keamanan akun Anda dan semua aktivitas yang terjadi di dalamnya. Kami menghargai privasi Anda sesuai dengan Kebijakan Privasi kami. Semua konten dalam aplikasi adalah milik kami atau pemberi lisensi kami dan dilindungi oleh undang-undang hak cipta. SelfMedic tidak bertanggung jawab atas kerugian atau kerusakan yang timbul dari penggunaan aplikasi. Syarat dan ketentuan ini dapat berubah sewaktu-waktu, dan penggunaan berkelanjutan Anda setelah perubahan berarti Anda menerima syarat yang diperbarui. Kami berhak menghentikan akses Anda jika Anda melanggar syarat ini.</string>
     <string name="headline_kontak">image kontak</string>
     <string name="btn_kontak">btn_kontak</string>
     <string name="headline_vapp">image cs</string>
@@ -133,7 +133,7 @@
 
     <string name="divider">devider</string>
     <string name="scrollviewhome">scrollvew news</string>
-    <string name="detial_kontak">Jika adnda mengalami kendala atau ada pertanyaan lainnya terkait penggunaan aplikasi SelfMedic. anda bisa mengirimkan ke :\nEmail    : helpdesk@selfmedic.com\nTelfon   : 12345\nwhatsapp : 08123445767</string>
+    <string name="detial_kontak">Jika anda mengalami kendala atau ada pertanyaan lainnya terkait penggunaan aplikasi SelfMedic. anda bisa mengirimkan ke :\nEmail    : support@selfmedic.com\nTelfon   : 12345\nwhatsapp : 08123445767</string>
     <string name="img_pill">img pill</string>
 
     // Diari Kesehatan
@@ -165,6 +165,7 @@
     <string name="berita_terbaru">Berita Terbaru</string>
     <string name="berita_terkini_terkait">Berita Terkini Terkait</string>
     <string name="lihat_semua">Lihat Semua</string>
+    <string name="kontak">Kontak</string>
 
 
 </resources>
