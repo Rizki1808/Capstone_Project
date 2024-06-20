@@ -69,13 +69,6 @@
         <activity
             android:name=".ui.feature.item.minumobat.MinumObatActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.feature.item.pendeteksi.pendeteksiwajah.HistoryWajahActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.feature.item.pendeteksi.pendeteksikulit.HistoryKulitActivity"
-            android:exported="false" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB7cn62_TiPObkj9AyZRsE_a7dXNLICQYY" />

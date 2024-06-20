@@ -98,7 +98,7 @@ class SignInActivity : AppCompatActivity() {
                 showLoading(false)
                 AlertDialog.Builder(this)
                     .setTitle("Error")
-                    .setMessage("Email atau Password salah")
+                    .setMessage(errorMessage)
                     .setPositiveButton("OK") { dialog, _ ->
                         dialog.dismiss()
                     }

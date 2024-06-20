@@ -43,7 +43,7 @@ class SignUpActivity : AppCompatActivity() {
                 showLoading(false)
                 AlertDialog.Builder(this)
                     .setTitle("Error")
-                    .setMessage("Email sudah digunakan")
+                    .setMessage(errorMessage)
                     .setPositiveButton("OK") { dialog, _ ->
                         dialog.dismiss()
                     }

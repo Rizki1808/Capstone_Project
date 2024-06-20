@@ -43,11 +43,6 @@ class PendeteksiWajahActivity : AppCompatActivity() {
         binding.btnCamera.setOnClickListener { startCamera() }
         binding.btnGalery.setOnClickListener { startGallery() }
 
-        binding.ivHistoryKulit.setOnClickListener {
-            val intent = Intent(this, HistoryWajahActivity::class.java)
-            startActivity(intent)
-        }
-
         binding.btnAnalisis.setOnClickListener {
             currentImageUri?.let { uri ->
                 val requestBody = createRequestBody(uri)
