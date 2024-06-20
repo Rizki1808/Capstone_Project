@@ -4,6 +4,7 @@ import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
 import com.example.capstoneproject.data.response.PendeteksiResponse
 import com.example.capstoneproject.data.response.PressureResponse
+import com.example.capstoneproject.data.response.ProfileResponse
 import com.example.capstoneproject.data.response.SugarResponse
 import com.example.capstoneproject.data.response.UploadPressureResponse
 import com.example.capstoneproject.data.response.UploadSugarResponse
@@ -56,6 +57,9 @@ interface ApiService {
         @Field("check_date") checkDate: String,
         @Field("check_time") checkTime: String
     ): UploadPressureResponse
+
+    @GET("profile")
+    suspend fun getProfile(): ProfileResponse
 
     @GET("sugar-blood")
     suspend fun getSugarBlood(): SugarResponse

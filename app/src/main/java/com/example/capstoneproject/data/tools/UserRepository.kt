@@ -9,6 +9,7 @@ import com.example.capstoneproject.data.response.DiseasesDetailResponse
 import com.example.capstoneproject.data.response.NewsResponse
 import com.example.capstoneproject.data.response.PendeteksiResponse
 import com.example.capstoneproject.data.response.PressureResponse
+import com.example.capstoneproject.data.response.ProfileResponse
 import com.example.capstoneproject.data.response.SugarResponse
 import com.example.capstoneproject.data.response.UploadPressureResponse
 import com.example.capstoneproject.data.response.UploadSugarResponse
@@ -16,7 +17,6 @@ import com.example.capstoneproject.data.response.UserModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import okhttp3.MultipartBody
-import retrofit2.Call
 
 class UserRepository private constructor(
     private var apiService: ApiService,
@@ -66,6 +66,13 @@ class UserRepository private constructor(
         Log.d("UserRepository", "Fetching stories with token: ${session.token}")
         val apiServiceWithToken = ApiConfig.getApiService(session.token)
         return apiServiceWithToken.postSugarBlood(sugar, checkDate, checkTime)
+    }
+
+    suspend fun getProfile(): ProfileResponse {
+        val session = userPreference.getSession().first()
+        Log.d("UserRepository", "Fetching stories with token: ${session.token}")
+        val apiServiceWithToken = ApiConfig.getApiService(session.token)
+        return apiServiceWithToken.getProfile()
     }
 
     suspend fun postSkinDetection(image: MultipartBody.Part): PendeteksiResponse {

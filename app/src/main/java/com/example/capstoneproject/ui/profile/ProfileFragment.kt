@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.FragmentProfileBinding
@@ -17,6 +18,7 @@ class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+    private lateinit var profileViewModel: ProfileViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +30,20 @@ class ProfileFragment : Fragment() {
 
         val factory = ViewModelFactory.getInstance(requireContext())
         val profileViewModel = ViewModelProvider(this, factory).get(ProfileViewModel::class.java)
+
+        profileViewModel.profile.observe(viewLifecycleOwner, Observer { result ->
+            result.onSuccess { profile ->
+                binding.apply {
+                    nameProfile.text = profile.name
+                    emailUserProfile.text = profile.email
+                }
+            }
+            result.onFailure {
+                // Handle error
+            }
+        })
+
+        profileViewModel.getProfile()
 
         binding.btnLogout.setOnClickListener {
             profileViewModel.logout()
