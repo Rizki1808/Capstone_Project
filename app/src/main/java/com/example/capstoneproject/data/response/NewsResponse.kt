@@ -28,7 +28,22 @@ data class Article(
     val publishedAt: String,
     @SerializedName("content")
     val content: String?
-)
+) {
+    companion object {
+        fun createLoadingItem(): Article {
+            return Article(
+                source = Source("loading", "Loading"),
+                author = null,
+                title = "Loading...",
+                description = null,
+                url = "",
+                urlToImage = null,
+                publishedAt = "",
+                content = null
+            )
+        }
+    }
+}
 
 data class Source(
     @SerializedName("id")

@@ -83,8 +83,8 @@ class UserRepository private constructor(
         return apiService.postAcneDetection(image)
     }
 
-    suspend fun getTopHeadlines(): NewsResponse {
-        return apiServiceNews.getTopHeadlines()
+    suspend fun getTopHeadlines(page: Int, pageSize: Int): NewsResponse {
+        return apiServiceNews.getTopHeadlines(page, pageSize)
     }
 
     suspend fun logout() {

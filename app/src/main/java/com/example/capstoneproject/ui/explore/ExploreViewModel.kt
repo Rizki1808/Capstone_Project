@@ -15,11 +15,11 @@ class ExploreViewModel(private val userRepository: UserRepository) : ViewModel()
     private val _news = MutableLiveData<Result<NewsResponse>>()
     val news: LiveData<Result<NewsResponse>> get() = _news
 
-    fun getNews() {
+    fun getNews(page: Int = 1, pageSize: Int = 20) {
         _isLoading.value = true
         viewModelScope.launch {
             try {
-                val result = userRepository.getTopHeadlines()
+                val result = userRepository.getTopHeadlines(page, pageSize)
                 _news.value = Result.success(result)
             } catch (e: Exception) {
                 _news.value = Result.failure(e)
