@@ -16,7 +16,7 @@ import com.example.capstoneproject.ui.feature.item.getImageUri
 import com.yalantis.ucrop.UCrop
 import java.io.File
 import androidx.lifecycle.Observer
-import com.example.capstoneproject.ui.feature.item.pendeteksi.HasilActivity
+import com.example.capstoneproject.ui.feature.item.pendeteksi.history.HistoryKulitActivity
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -59,7 +59,7 @@ class PendeteksiKulitActivity : AppCompatActivity() {
             result.onSuccess {
                 // Handle success response
                 Log.d("UploadSkin", "Success: $it")
-                val intent = Intent(this, HasilActivity::class.java).apply {
+                val intent = Intent(this, HasilKulitActivity::class.java).apply {
                     putExtra("RESULT", it.result)
                     putExtra("IMAGE_URI", currentImageUri.toString())
                 }

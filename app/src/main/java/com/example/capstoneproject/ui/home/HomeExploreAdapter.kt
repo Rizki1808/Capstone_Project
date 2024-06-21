@@ -4,8 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.capstoneproject.R
 import com.example.capstoneproject.data.response.Article
 import com.example.capstoneproject.databinding.ItemHomeNewsBinding
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class HomeExploreAdapter : RecyclerView.Adapter<HomeExploreAdapter.ListViewHolder>() {
 
@@ -40,7 +44,14 @@ class HomeExploreAdapter : RecyclerView.Adapter<HomeExploreAdapter.ListViewHolde
         fun bind(data: Article) {
             binding.apply {
                 tvNewsTitle.text = data.title
-                tvNewsDate.text = data.publishedAt
+
+                // Parse and format the publishedAt date
+                val originalFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+                val targetFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                val date: Date? = originalFormat.parse(data.publishedAt ?: "")
+                val formattedDate = date?.let { targetFormat.format(it) } ?: data.publishedAt
+
+                tvNewsDate.text = formattedDate
                 if (data.urlToImage != null) {
                     Glide.with(itemView.context)
                         .load(data.urlToImage)

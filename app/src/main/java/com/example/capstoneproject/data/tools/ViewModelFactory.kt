@@ -10,6 +10,7 @@ import com.example.capstoneproject.ui.feature.item.diari.tekanandarah.TekananVie
 import com.example.capstoneproject.ui.feature.item.diari.tekanandarah.tambahtekanan.TambahTekananViewModel
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitViewModel
 import com.example.capstoneproject.ui.feature.item.infopenyakit.detailpenyakit.DetailPenyakitViewModel
+import com.example.capstoneproject.ui.feature.item.pendeteksi.history.HistoryViewModel
 import com.example.capstoneproject.ui.feature.item.pendeteksi.pendeteksikulit.KulitViewModel
 import com.example.capstoneproject.ui.feature.item.pendeteksi.pendeteksiwajah.WajahViewModel
 import com.example.capstoneproject.ui.login.signin.SignInViewModel
@@ -61,6 +62,9 @@ class ViewModelFactory(private val repository: UserRepository) :
             }
             modelClass.isAssignableFrom(ExploreViewModel::class.java) -> {
                 ExploreViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(HistoryViewModel::class.java) -> {
+                HistoryViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

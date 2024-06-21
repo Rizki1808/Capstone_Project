@@ -14,7 +14,7 @@ import androidx.lifecycle.Observer
 import com.example.capstoneproject.data.tools.ViewModelFactory
 import com.example.capstoneproject.databinding.ActivityPendeteksiWajahBinding
 import com.example.capstoneproject.ui.feature.item.getImageUri
-import com.example.capstoneproject.ui.feature.item.pendeteksi.HasilActivity
+import com.example.capstoneproject.ui.feature.item.pendeteksi.history.HistoryWajahActivity
 import com.yalantis.ucrop.UCrop
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -59,7 +59,7 @@ class PendeteksiWajahActivity : AppCompatActivity() {
             result.onSuccess {
                 // Handle success response
                 Log.d("UploadFace", "Success: $it")
-                val intent = Intent(this, HasilActivity::class.java).apply {
+                val intent = Intent(this, HasilWajahActivity::class.java).apply {
                     putExtra("RESULT", it.result)
                     putExtra("IMAGE_URI", currentImageUri.toString())
                 }

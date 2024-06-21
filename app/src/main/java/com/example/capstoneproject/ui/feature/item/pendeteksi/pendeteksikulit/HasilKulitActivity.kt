@@ -1,4 +1,4 @@
-package com.example.capstoneproject.ui.feature.item.pendeteksi
+package com.example.capstoneproject.ui.feature.item.pendeteksi.pendeteksikulit
 
 import android.content.Intent
 import android.net.Uri
@@ -6,8 +6,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.capstoneproject.databinding.ActivityHasilBinding
 import com.example.capstoneproject.ui.feature.item.infopenyakit.InfoPenyakitActivity
+import com.example.capstoneproject.ui.feature.item.pendeteksi.history.HistoryKulitActivity
 
-class HasilActivity : AppCompatActivity() {
+class HasilKulitActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHasilBinding
 
@@ -24,6 +25,11 @@ class HasilActivity : AppCompatActivity() {
         // Update UI
         binding.tvHasil.text = result
         binding.ivPreviewImageHasilKulit.setImageURI(imageUri)
+
+        binding.ivHistoryKulit.setOnClickListener {
+            val intent = Intent(this, HistoryKulitActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnFind.setOnClickListener{
             val intent = Intent(this, InfoPenyakitActivity::class.java)

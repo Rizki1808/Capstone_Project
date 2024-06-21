@@ -6,6 +6,7 @@ import com.example.capstoneproject.data.api.ApiService
 import com.example.capstoneproject.data.api.ApiServiceNews
 import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
+import com.example.capstoneproject.data.response.HistoryResponse
 import com.example.capstoneproject.data.response.NewsResponse
 import com.example.capstoneproject.data.response.PendeteksiResponse
 import com.example.capstoneproject.data.response.PressureResponse
@@ -76,11 +77,31 @@ class UserRepository private constructor(
     }
 
     suspend fun postSkinDetection(image: MultipartBody.Part): PendeteksiResponse {
-        return apiService.postSkinDetection(image)
+        val session = userPreference.getSession().first()
+        Log.d("UserRepository", "Fetching stories with token: ${session.token}")
+        val apiServiceWithToken = ApiConfig.getApiService(session.token)
+        return apiServiceWithToken.postSkinDetection(image)
+    }
+
+    suspend fun getSkinDetection(): HistoryResponse {
+        val session = userPreference.getSession().first()
+        Log.d("UserRepository", "Fetching stories with token: ${session.token}")
+        val apiServiceWithToken = ApiConfig.getApiService(session.token)
+        return apiServiceWithToken.getSkinDetection()
     }
 
     suspend fun postAcneDetection(image: MultipartBody.Part): PendeteksiResponse {
-        return apiService.postAcneDetection(image)
+        val session = userPreference.getSession().first()
+        Log.d("UserRepository", "Fetching stories with token: ${session.token}")
+        val apiServiceWithToken = ApiConfig.getApiService(session.token)
+        return apiServiceWithToken.postAcneDetection(image)
+    }
+
+    suspend fun getAcneDetection(): HistoryResponse {
+        val session = userPreference.getSession().first()
+        Log.d("UserRepository", "Fetching stories with token: ${session.token}")
+        val apiServiceWithToken = ApiConfig.getApiService(session.token)
+        return apiServiceWithToken.getAcneDetection()
     }
 
     suspend fun getTopHeadlines(page: Int, pageSize: Int): NewsResponse {

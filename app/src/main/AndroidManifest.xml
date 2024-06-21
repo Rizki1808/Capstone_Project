@@ -30,7 +30,10 @@
             android:name=".ui.feature.item.diari.guladarah.tambahgula.TambahGulaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.pendeteksi.HasilActivity"
+            android:name=".ui.feature.item.pendeteksi.pendeteksikulit.HasilKulitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.feature.item.pendeteksi.pendeteksiwajah.HasilWajahActivity"
             android:exported="false" />
         <activity
             android:name=".ui.feature.item.infopenyakit.detailpenyakit.DetailPenyakitActivity"
@@ -70,10 +73,10 @@
             android:name=".ui.feature.item.minumobat.MinumObatActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.pendeteksi.pendeteksiwajah.HistoryWajahActivity"
+            android:name=".ui.feature.item.pendeteksi.history.HistoryWajahActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.feature.item.pendeteksi.pendeteksikulit.HistoryKulitActivity"
+            android:name=".ui.feature.item.pendeteksi.history.HistoryKulitActivity"
             android:exported="false" />
 
         <meta-data

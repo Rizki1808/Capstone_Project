@@ -1,7 +1,9 @@
 package com.example.capstoneproject.data.api
 
+import com.example.capstoneproject.data.response.DataHistory
 import com.example.capstoneproject.data.response.DiseasesResponse
 import com.example.capstoneproject.data.response.DiseasesDetailResponse
+import com.example.capstoneproject.data.response.HistoryResponse
 import com.example.capstoneproject.data.response.PendeteksiResponse
 import com.example.capstoneproject.data.response.PressureResponse
 import com.example.capstoneproject.data.response.ProfileResponse
@@ -78,9 +80,15 @@ interface ApiService {
         @Part image: MultipartBody.Part
     ): PendeteksiResponse
 
+    @GET("skin-detection")
+    suspend fun getSkinDetection(): HistoryResponse
+
     @Multipart
     @POST("acne-detection")
     suspend fun postAcneDetection(
         @Part image: MultipartBody.Part
     ): PendeteksiResponse
+
+    @GET("acne-detection")
+    suspend fun getAcneDetection(): HistoryResponse
 }
