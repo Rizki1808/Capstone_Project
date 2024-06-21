@@ -24,7 +24,6 @@ The project is divided into three main parts: Machine Learning, Mobile Developme
 - **Development**: Implemented in Android Studio using Kotlin.
 - **Libraries**:
   - Glide for image loading
-  - CameraX for camera features
   - Retrofit for HTTP client
   - Room for local data storage
   - Coroutines for Kotlin code management
